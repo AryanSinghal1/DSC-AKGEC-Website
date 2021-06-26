@@ -22,13 +22,13 @@ class Home extends Component {
   render() {
     return (
       <div className={classes.Home}>
-        <ShowcaseHome />
-        <AboutHome />
-        <EventsHome />
-        <ProjectsHome />
-        <BlogHome />
-        <TeamHome />
-        <Footer />
+        <ShowcaseHome theme={this.props.theme} />
+        <AboutHome theme={this.props.theme} />
+        <EventsHome theme={this.props.theme} />
+        <ProjectsHome theme={this.props.theme} />
+        {/* <BlogHome theme={this.props.theme} /> */}
+        <TeamHome theme={this.props.theme} />
+        <Footer theme={this.props.theme} />
       </div>
     );
   }

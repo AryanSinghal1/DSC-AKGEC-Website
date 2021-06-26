@@ -4,6 +4,7 @@
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
+  height: calc(100vh - 20vh);
   background-color: #fff;
   transition: 0.2s;
 }
@@ -16,8 +17,12 @@
 .footerTop {
   padding: 0 15px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   transition: 0.2s;
 }
 
@@ -25,11 +30,15 @@
   padding: 0 15px;
   border-bottom: 1px solid #fff;
   transition: 0.2s;
+  align-self: center;
+}
+
+.footerTop .logo a > img {
+  height: 4rem;
 }
 
 .quickLinks,
 .socials {
-  padding: 0 25px;
   color: #676c72;
   font-family: "Google Sans", sans-serif;
   font-size: 14px;
@@ -39,15 +48,18 @@
 .quickLinks .linkHeader,
 .socials .socialsHeader {
   color: var(--heading-color);
-  font-size: 16px;
+  text-align: center;
+  font-size: 40px;
   font-weight: 5 00;
-  margin: 5px 0 15px 0;
+  margin: 5px 0 45px 0;
+  width: 100%;
 }
 
 .linkList {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  font-size: 20px;
+  list-style: none;
   transition: 0.2s;
 }
 
@@ -74,27 +86,47 @@
   font-size: 7px;
 }
 
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .socials .socialLinks {
   list-style: none;
   display: flex;
+  width: 40%;
+  justify-content: space-between;
   transition: 0.2s;
 }
 
 .socials .socialLinks li {
   margin: 0 6px 6px 0;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   line-height: 25px;
 }
 
 .socials .socialLinks li a {
   text-decoration: none;
+  display: inline-block;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 50%;
+  line-height: 0.6;
 }
 
 .socials .socialLinks svg {
-  height: 13px;
+  font-size: 35px;
   color: #515357;
+  transition: 0.2s;
+}
+
+.socials .socialLinks svg:hover {
+  /* height: 13px; */
+  font-size: 35px;
+  color: var(--google-blue);
 }
 
 .footerGap {
@@ -119,7 +151,7 @@
 
 .copyright {
   font-family: "Google Sans", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   color: #676c72;
 }

@@ -80,7 +80,7 @@ const SideDrawer = (props) => {
               <span>Events</span>
             </NavLink>
           </li>
-          <li className={classes.navText}>
+          {/* <li className={classes.navText}>
             <NavLink
               to="/blog"
               className={classes.menuBars}
@@ -89,7 +89,7 @@ const SideDrawer = (props) => {
               <MdIcons.MdBook />
               <span>Blogs</span>
             </NavLink>
-          </li>
+          </li> */}
           <li className={classes.navText}>
             <NavLink
               to="/team"
@@ -100,7 +100,7 @@ const SideDrawer = (props) => {
               <span>Team</span>
             </NavLink>
           </li>
-          <li className={classes.navText}>
+          {/* <li className={classes.navText}>
             <NavLink
               to="/contact"
               className={classes.menuBars}
@@ -109,7 +109,7 @@ const SideDrawer = (props) => {
               <MdIcons.MdMessage />
               <span>Register</span>
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

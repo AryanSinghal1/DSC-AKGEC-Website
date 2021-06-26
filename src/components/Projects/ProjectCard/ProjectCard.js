@@ -2,11 +2,19 @@ import React from "react";
 
 // import css
 import classes from "./ProjectCard.module.css";
+import classesDark from "./ProjectCardDark.module.css";
 
 //import icons
 import * as FaIcons from "react-icons/fa";
 
 const ProjectCard = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
+
   const mediaMatch = window.matchMedia("(max-width:819px");
 
   let web = props.cardTags["web"];
@@ -16,7 +24,7 @@ const ProjectCard = (props) => {
   const webList = web.map((tag) => {
     return (
       <li key={tag}>
-        <div className={`${classes.singleTag} ${classes.web}`}>{tag}</div>
+        <div className={`${styles.singleTag} ${styles.web}`}>{tag}</div>
       </li>
     );
   });
@@ -24,7 +32,7 @@ const ProjectCard = (props) => {
   const mlList = ml.map((tag) => {
     return (
       <li key={tag}>
-        <div className={`${classes.singleTag} ${classes.ml}`}>{tag}</div>
+        <div className={`${styles.singleTag} ${styles.ml}`}>{tag}</div>
       </li>
     );
   });
@@ -32,24 +40,24 @@ const ProjectCard = (props) => {
   const appList = app.map((tag) => {
     return (
       <li key={tag}>
-        <div className={`${classes.singleTag} ${classes.app}`}>{tag}</div>
+        <div className={`${styles.singleTag} ${styles.app}`}>{tag}</div>
       </li>
     );
   });
 
   let borderStyle = {};
 
-  let orderClass = [classes.cardImg];
+  let orderClass = [styles.cardImg];
   // console.log(mediaMatch);
   if (!props.order && !mediaMatch.matches) {
-    orderClass = [classes.cardImg, classes.order];
+    orderClass = [styles.cardImg, styles.order];
     borderStyle = {
       borderLeft: "0.5px solid var(--border-color)",
       borderRight: "none",
       borderRadius: "0 5px 5px 0",
     };
   } else if (mediaMatch.matches) {
-    orderClass = [classes.cardImg];
+    orderClass = [styles.cardImg];
     borderStyle = {
       borderLeft: "none",
       borderRight: "none",
@@ -57,25 +65,25 @@ const ProjectCard = (props) => {
   }
 
   return (
-    <div className={classes.ProjectCard}>
-      <div className={`${classes.card}`}>
+    <div className={styles.ProjectCard}>
+      <div className={`${styles.card}`}>
         <div className={orderClass.join(" ")} style={borderStyle}>
           <img src={props.image} alt="project" />
         </div>
-        <div className={classes.cardBody}>
-          <div className={classes.cardInfo}>
+        <div className={styles.cardBody}>
+          <div className={styles.cardInfo}>
             <a href={props.links.github}>
-              <h1 className={classes.cardHeader}>{props.cardHeader}</h1>
+              <h1 className={styles.cardHeader}>{props.cardHeader}</h1>
             </a>
-            <ul className={classes.tags}>
+            <ul className={styles.tags}>
               {webList}
               {mlList}
               {appList}
             </ul>
           </div>
-          <div className={classes.cardText}>
+          <div className={styles.cardText}>
             {props.cardText}
-            <ul className={classes.links}>
+            <ul className={styles.links}>
               <li>
                 <a href={props.links.github}>
                   <FaIcons.FaGithub />

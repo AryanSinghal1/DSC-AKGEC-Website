@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // import css
 import classes from "./Footer.module.css";
+import classesDark from "./FooterDark.module.css";
 
 //icon Import
 import * as FiIcons from "react-icons/fi";
@@ -11,38 +12,44 @@ import * as FiIcons from "react-icons/fi";
 import Logo from "../../Logo/Logo";
 
 const Footer = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
   return (
-    <footer className={classes.Footer}>
-      <div className={classes.Container}>
-        <div className={classes.footerTop}>
-          <div className={classes.logo}>
+    <footer className={styles.Footer}>
+      <div className={styles.Container}>
+        <div className={styles.footerTop}>
+          <div className={styles.logo}>
             <Link to="/">
-              <Logo />
+              <Logo theme={props.theme} />
             </Link>
           </div>
-          <div className={classes.quickLinks}>
-            <h5 className={classes.linkHeader}>Quick Links</h5>
-            <ul className={classes.linkList}>
+          <div className={styles.quickLinks}>
+            <h5 className={styles.linkHeader}>Quick Links</h5>
+            <ul className={styles.linkList}>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/">&rarr; Home</Link>
               </li>
               <li>
-                <Link to="/events">Events</Link>
+                <Link to="/events">&rarr; Events</Link>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects">&rarr; Projects</Link>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog">&rarr; Blog</Link>
               </li>
               <li>
-                <Link to="/team">Team</Link>
+                <Link to="/team">&rarr; Team</Link>
               </li>
             </ul>
           </div>
-          <div className={classes.socials}>
-            <h5 className={classes.socialsHeader}>Social</h5>
-            <ul className={classes.socialLinks}>
+          <div className={styles.socials}>
+            <h5 className={styles.socialsHeader}>Social</h5>
+            <ul className={styles.socialLinks}>
               <li>
                 <a href="https://www.instagram.com/dsc_akgec/">
                   <FiIcons.FiInstagram />
@@ -61,10 +68,10 @@ const Footer = (props) => {
             </ul>
           </div>
         </div>
-        <hr className={classes.footerGap} />
-        <div className={classes.footerBottom}>
-          <div className={classes.footerBottomContainer}>
-            <div className={classes.copyright}>&copy; Anuj Negi</div>
+        <hr className={styles.footerGap} />
+        <div className={styles.footerBottom}>
+          <div className={styles.footerBottomContainer}>
+            <div className={styles.copyright}>&copy; DSC-AKGEC</div>
           </div>
         </div>
       </div>

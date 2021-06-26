@@ -34,6 +34,28 @@
   --text-color: #5f6368;
   --button-shadow-color: #b3b3b3;
   --border-color: #dadce0;
+
+  /* DARK MODE SPECIFIC */
+  --dark-mode: #242526;
+  --dark-mode-bg-1: #282c34;
+  --dark-mode-bg-2: #222221;
+  --dark-mode-bg-3: #242526;
+  --dark-mode-bg-4: #3a3b3c;
+  --dark-mode-bg-5: #131417;
+  --dark-mode-bg-6: #191919;
+  --dark-mode-bg-7: #121212;
+  --dark-mode-bg-8: #3b3b3b;
+  --dark-mode-bg-9: #222222;
+  --dark-mode-text-color-1: #fff;
+  --dark-mode-text-color-2: #eee;
+
+  /* dark mode neumorphism */
+  --dark-mode-neu-bg: linear-gradient(145deg, #383d42, #2f3338);
+  --dark-mode-neu-bg-1: #2d3134;
+  --dark-mode-neu-box-shadow: -8px 8px 16px #282c30, 8px -8px 16px #3d444a;
+  --dark-mode-text-color-soft-1: #b7b9bc;
+  --dark-mode-text-color-soft-2: #72777c;
+  --dark-mode-text-color-soft-2: #72777c;
 }
 
 /* font-family: 'Noto Sans', sans-serif;

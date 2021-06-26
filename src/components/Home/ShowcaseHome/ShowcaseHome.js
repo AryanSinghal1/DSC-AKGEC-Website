@@ -2,6 +2,7 @@ import React from "react";
 
 // css import
 import classes from "./ShowcaseHome.module.css";
+import classesDark from "./ShowcaseHomeDark.module.css";
 
 // image import
 import showcaseImage from "../../../assets/images/showcaseImage.svg";
@@ -10,10 +11,16 @@ import showcaseImage from "../../../assets/images/showcaseImage.svg";
 import Button from "../../UI/Button/Button";
 
 const ShowcaseHome = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
   return (
-    <div className={classes.container}>
-      <div className={classes.ShowcaseHome}>
-        <div className={classes.ShowcaseBody}>
+    <div className={styles.container}>
+      <div className={styles.ShowcaseHome}>
+        <div className={styles.ShowcaseBody}>
           <h1>
             Developer Student Clubs <span>AKGEC</span>
           </h1>
@@ -28,6 +35,7 @@ const ShowcaseHome = (props) => {
           <Button
             href="https://developers.google.com/community/dsc"
             icon="info"
+            theme={props.theme}
           >
             &nbsp;LEARN MORE
           </Button>

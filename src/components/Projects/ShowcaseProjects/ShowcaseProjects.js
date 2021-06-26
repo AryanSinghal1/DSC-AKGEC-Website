@@ -2,14 +2,25 @@ import React from "react";
 
 //import css
 import classes from "./ShowcaseProjects.module.css";
+import classesDark from "./ShowcaseProjectsDark.module.css";
 
-const ShowcaseProjects = () => {
+const ShowcaseProjects = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
   return (
-    <div className={classes.ShowcaseProjects}>
-      <div className={classes.Container}>
-        <div className={classes.topContent}>
-          <h1 className={classes.projectsHeader}>Projects</h1>
-          <p className={classes.projectsText}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum magni accusantium neque et veniam laudantium ratione voluptate dolorum officia tempora!</p>
+    <div className={styles.ShowcaseProjects}>
+      <div className={styles.Container}>
+        <div className={styles.topContent}>
+          <h1 className={styles.projectsHeader}>Projects</h1>
+          <p className={styles.projectsText}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
+            magni accusantium neque et veniam laudantium ratione voluptate
+            dolorum officia tempora!
+          </p>
         </div>
       </div>
     </div>

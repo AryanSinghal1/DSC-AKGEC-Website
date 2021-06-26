@@ -2,6 +2,7 @@ import React from "react";
 
 // import css
 import classes from "./Events.module.css";
+import classesDark from "./EventsDark.module.css";
 
 //import component
 import ShowcaseEvents from "./ShowcaseEvents/ShowcaseEvents";
@@ -15,11 +16,17 @@ class Events extends React.Component {
   //   this.props.setHeight(heightEle);
   // }
   render() {
+    let styles = classes;
+    if (this.props.theme) {
+      styles = classes;
+    } else {
+      styles = classesDark;
+    }
     return (
-      <div className={classes.Events}>
-        <ShowcaseEvents />
-        <EventsList />
-        <Footer />
+      <div className={styles.Events}>
+        <ShowcaseEvents theme={this.props.theme} />
+        <EventsList theme={this.props.theme} />
+        <Footer theme={this.props.theme} />
       </div>
     );
   }
