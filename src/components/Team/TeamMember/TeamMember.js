@@ -2,48 +2,56 @@ import React from "react";
 
 //import Css
 import classes from "./TeamMember.module.css";
+import classesDark from "./TeamMemberDark.module.css";
 
 //import icons
 import * as FiIcons from "react-icons/fi";
 
 const TeamMember = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
+
   let cardClassDomain, cardImgDomain, svgClassDomain;
   switch (props.domain) {
     case 1:
-      cardClassDomain = classes.card1;
-      cardImgDomain = classes.cardImg1;
-      svgClassDomain = classes.svgDomain1;
+      cardClassDomain = styles.card1;
+      cardImgDomain = styles.cardImg1;
+      svgClassDomain = styles.svgDomain1;
       break;
     case 2:
-      cardClassDomain = classes.card2;
-      cardImgDomain = classes.cardImg2;
-      svgClassDomain = classes.svgDomain2;
+      cardClassDomain = styles.card2;
+      cardImgDomain = styles.cardImg2;
+      svgClassDomain = styles.svgDomain2;
       break;
     case 3:
-      cardClassDomain = classes.card3;
-      cardImgDomain = classes.cardImg3;
-      svgClassDomain = classes.svgDomain3;
+      cardClassDomain = styles.card3;
+      cardImgDomain = styles.cardImg3;
+      svgClassDomain = styles.svgDomain3;
       break;
     case 4:
-      cardClassDomain = classes.card4;
-      cardImgDomain = classes.cardImg4;
-      svgClassDomain = classes.svgDomain4;
+      cardClassDomain = styles.card4;
+      cardImgDomain = styles.cardImg4;
+      svgClassDomain = styles.svgDomain4;
       break;
     default:
       break;
   }
 
   return (
-    <div className={classes.TeamMember}>
-      <div className={`${classes.card} ${cardClassDomain}`}>
+    <div className={styles.TeamMember}>
+      <div className={`${styles.card} ${cardClassDomain}`}>
         <div>
-          <div className={`${classes.cardImg} ${cardImgDomain}`}>
+          <div className={`${styles.cardImg} ${cardImgDomain}`}>
             <img src={props.image} alt={props.cardName} />
           </div>
-          <div className={classes.cardBody}>
-            <h1 className={classes.cardName}>{props.cardName}</h1>
-            <h2 className={classes.cardDesignation}>{props.cardDesignation}</h2>
-            <ul className={classes.linkList}>
+          <div className={styles.cardBody}>
+            <h1 className={styles.cardName}>{props.cardName}</h1>
+            <h2 className={styles.cardDesignation}>{props.cardDesignation}</h2>
+            <ul className={styles.linkList}>
               <li>
                 <a href={props.links.github}>
                   <FiIcons.FiGithub className={svgClassDomain} />

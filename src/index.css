@@ -52,16 +52,13 @@
   /* dark mode neumorphism */
   --dark-mode-neu-bg: linear-gradient(145deg, #383d42, #2f3338);
   --dark-mode-neu-bg-1: #2d3134;
-  --dark-mode-neu-box-shadow: -8px 8px 16px #282c30, 8px -8px 16px #3d444a;
   --dark-mode-text-color-soft-1: #b7b9bc;
   --dark-mode-text-color-soft-2: #72777c;
   --dark-mode-text-color-soft-2: #72777c;
-}
 
-/* font-family: 'Noto Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif; 
-font-family: 'Google Sans', sans-serif; */
+  /* dark mode box shadow */
+  --dark-mode-neu-box-shadow: -8px 8px 16px #282c30, 8px -8px 16px #3d444a;
+}
 
 * {
   box-sizing: border-box;

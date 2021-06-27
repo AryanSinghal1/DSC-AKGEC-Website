@@ -2,6 +2,7 @@ import React from "react";
 
 // import css
 import classes from "./Team.module.css";
+import classesDark from "./TeamDark.module.css";
 
 //import Component
 import ShowcaseTeam from "./ShowcaseTeam/ShowcaseTeam";
@@ -15,11 +16,17 @@ class Team extends React.Component {
   //   this.props.setHeight(heightEle);
   // }
   render() {
+    let styles = classes;
+    if (this.props.theme) {
+      styles = classes;
+    } else {
+      styles = classesDark;
+    }
     return (
-      <div className={classes.Team}>
-        <ShowcaseTeam />
-        <TeamList />
-        <Footer />
+      <div className={styles.Team}>
+        <ShowcaseTeam theme={this.props.theme} />
+        <TeamList theme={this.props.theme} />
+        <Footer theme={this.props.theme} />
       </div>
     );
   }

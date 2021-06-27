@@ -41,6 +41,11 @@ class Layout extends Component {
   }
 
   render() {
+    // let localTheme;
+    // if (localStorage) {
+    //   localTheme = localStorage.getItem("theme");
+    // }
+
     return (
       <>
         <div>

@@ -2,6 +2,7 @@ import React from "react";
 
 //import css
 import classes from "./TeamList.module.css";
+import classesDark from "./TeamListDark.module.css";
 
 //import component
 import TeamMember from "../TeamMember/TeamMember";
@@ -9,7 +10,13 @@ import TeamMember from "../TeamMember/TeamMember";
 //import DataFile
 import { TeamData } from "../TeamData";
 
-const TeamList = () => {
+const TeamList = (props) => {
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
   const fourthYearList = TeamData.map((member) => {
     if (member.year === 4) {
       return (
@@ -20,6 +27,7 @@ const TeamList = () => {
           image={member.image}
           links={member.links}
           domain={member.domain}
+          theme={props.theme}
         />
       );
     }
@@ -36,6 +44,7 @@ const TeamList = () => {
           image={member.image}
           links={member.links}
           domain={member.domain}
+          theme={props.theme}
         />
       );
     }
@@ -43,14 +52,14 @@ const TeamList = () => {
   });
 
   return (
-    <div className={classes.TeamList}>
-      <div className={classes.section}>
-        <h1 className={classes.teamListHeader}>Members from 4th Year</h1>
-        <div className={classes.listContainer}>{fourthYearList}</div>
+    <div className={styles.TeamList}>
+      <div className={styles.section}>
+        <h1 className={styles.teamListHeader}>Members from 4th Year</h1>
+        <div className={styles.listContainer}>{fourthYearList}</div>
       </div>
-      <div className={classes.section}>
-        <h1 className={classes.teamListHeader}>Members from 3rd Year</h1>
-        <div className={classes.listContainer}>{thirdYearList}</div>
+      <div className={styles.section}>
+        <h1 className={styles.teamListHeader}>Members from 3rd Year</h1>
+        <div className={styles.listContainer}>{thirdYearList}</div>
       </div>
     </div>
   );

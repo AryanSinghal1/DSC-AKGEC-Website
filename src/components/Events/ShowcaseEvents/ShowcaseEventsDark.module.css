@@ -2,6 +2,7 @@
   margin-top: 70px;
   overflow: hidden;
   border-bottom: 1px solid var(--dark-mode-bg-4);
+  box-shadow: inset 0 -10px 20px -10px #000000;
   background-attachment: fixed;
   background-image: linear-gradient(
       315deg,
