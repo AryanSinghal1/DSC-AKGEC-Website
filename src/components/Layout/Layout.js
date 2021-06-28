@@ -15,6 +15,7 @@ import Events from "../Events/Events";
 import Team from "../Team/Team";
 import Projects from "../Projects/Projects";
 import Blog from "../Blog/Blog";
+import ScrollToTop from "../../ScrollToTop";
 // import Footer from "../UI/Footer/Footer";
 
 class Layout extends Component {
@@ -41,11 +42,6 @@ class Layout extends Component {
   }
 
   render() {
-    // let localTheme;
-    // if (localStorage) {
-    //   localTheme = localStorage.getItem("theme");
-    // }
-
     return (
       <>
         <div>
@@ -54,6 +50,7 @@ class Layout extends Component {
             switchTheme={this.themeToggler}
             theme={this.state.theme}
           />
+          <ScrollToTop />
         </div>
         <div
           className={this.state.styles.Layout}

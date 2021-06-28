@@ -26,6 +26,7 @@ const ProjectsList = (props) => {
           order={true}
           cardHeader={data.name}
           cardTags={data.tags}
+          members={data.members}
           cardText={data.description}
           links={data.links}
           image={data.image}
@@ -39,6 +40,7 @@ const ProjectsList = (props) => {
         key={data.id}
         cardHeader={data.name}
         cardTags={data.tags}
+        members={data.members}
         cardText={data.description}
         links={data.links}
         image={data.image}

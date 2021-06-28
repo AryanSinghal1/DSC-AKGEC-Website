@@ -21,6 +21,16 @@ const ProjectCard = (props) => {
   let ml = props.cardTags["ml"];
   let app = props.cardTags["app"];
 
+  let member = props.members;
+
+  const membersList = member.map((name) => {
+    return (
+      <li key={name}>
+        <p className={styles.memberName}>{name}</p>
+      </li>
+    );
+  });
+
   const webList = web.map((tag) => {
     return (
       <li key={tag}>
@@ -80,12 +90,13 @@ const ProjectCard = (props) => {
               {mlList}
               {appList}
             </ul>
+            <ul className={styles.members}>{membersList}</ul>
           </div>
           <div className={styles.cardText}>
             {props.cardText}
             <ul className={styles.links}>
               <li>
-                <a href={props.links.github}>
+                <a href={props.links.github} target={"_blank"}>
                   <FaIcons.FaGithub />
                   <span>&nbsp;Github</span>
                 </a>

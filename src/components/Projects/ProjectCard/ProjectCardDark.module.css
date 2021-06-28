@@ -1,6 +1,6 @@
 .card {
   background: var(--dark-mode-bg-9);
-  height: 380px;
+  height: 400px;
   display: flex;
   border-radius: 5px;
   margin: 2rem auto 7rem auto;
@@ -143,6 +143,26 @@
   background: var(--google-med-lite-yellow);
 }
 
+.members {
+  display: inline-block;
+  width: 90%;
+  display: flex;
+  list-style: none;
+}
+
+.members li:not(:first-child) {
+  margin-left: 10px;
+}
+
+.memberName {
+  color: var(--dark-mode-text-color-soft-1);
+  font-weight: 500;
+  font-size: 13px;
+  background: var(--dark-mode-neu-bg-1);
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+
 @media (max-width: 1169px) {
   .card {
     width: 786px;
@@ -150,19 +170,31 @@
     align-items: flex-start;
   }
   .cardBody {
-    padding: 1.2rem;
+    padding: 1rem 0.8rem;
   }
   .cardHeader {
-    font-size: 32px;
+    font-size: 30px;
     padding-bottom: 0.8rem;
     margin-top: -5px;
   }
   .cardText {
-    font-size: 14px;
-    padding: 1rem 0.2rem 0 0.2rem;
+    font-size: 13px;
+    padding: 0.8rem 0.2rem 0 0.2rem;
+    line-height: 1.4;
   }
+  .members {
+    width: 90%;
+  }
+  .members li:not(:first-child) {
+    margin-left: 8px;
+  }
+  .memberName {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
   .singleTag {
-    padding: 4.5px 13.5px;
+    padding: 4px 12px;
   }
   .cardImg {
     height: 300px;
@@ -182,30 +214,33 @@
 @media (max-width: 819px) {
   .card {
     flex-direction: column;
-    height: 600px;
+    height: 630px;
     width: 350px;
   }
-  .cardBody {
-    flex: 3;
+  .cardHeader {
+    font-size: 24px;
+    padding-bottom: 0.8rem;
+    margin-top: -5px;
   }
   .cardImg {
-    height: 200px;
-    width: 350px;
+    overflow: visible;
     border-right: none;
     border-radius: 5px 5px 0 0;
     flex: 2;
   }
   .cardImg img {
+    width: 100%;
     border-radius: 5px 5px 0 0;
   }
   .cardBody {
     border-radius: 0 0 5px 5px;
+    flex: 3;
   }
   .order {
     order: 1;
   }
   .cardText {
-    font-size: 14px;
+    font-size: 12.5px;
   }
   .links {
     margin-top: 10px;
@@ -214,60 +249,73 @@
 
 @media (max-width: 399px) {
   .card {
-    height: 600px;
-    width: 300px;
+    height: 580px;
+    width: 280px;
   }
   .cardImg {
-    height: 200px;
-    width: 300px;
+    /* height: 200px; */
+    width: 280px;
   }
   .cardBody {
-    padding: 0.7rem;
+    padding: 0.6rem;
   }
   .cardHeader {
-    font-size: 26px;
-    padding-bottom: 6px;
+    font-size: 22px;
+    padding-bottom: 5px;
     margin-top: 0;
   }
+  .memberName {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
   .cardText {
-    font-size: 13px;
+    font-size: 11px;
     padding-top: 0.5rem;
   }
   .tags {
     flex-wrap: wrap;
   }
   .singleTag {
-    margin-top: 6px;
-    margin-right: 8px;
-    padding: 4px 12px;
+    margin-top: 4px;
+    margin-right: 4px;
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+  .links a {
+    font-size: 0.6rem;
+    margin: 6px 6px 0 0;
+    padding: 4px 8px;
   }
 }
 
 @media (max-width: 299px) {
   .card {
-    height: 600px;
+    height: 520px;
     width: 230px;
   }
   .cardImg {
-    height: 200px;
+    /* height: 200px; */
     width: 230px;
   }
   .cardBody {
     padding: 0.5rem;
   }
   .cardHeader {
-    font-size: 22px;
+    font-size: 18px;
     padding-bottom: 6px;
-    margin-top: 0;
   }
   .cardText {
-    font-size: 12px;
+    font-size: 10.5px;
+  }
+  .memberName {
+    font-size: 8px;
   }
   .singleTag {
-    font-size: 10px;
+    font-size: 8px;
   }
   .links a {
+    font-size: 0.5rem;
+    margin: 6px 6px 0 0;
     padding: 3px 6px;
-    font-size: 0.8rem;
   }
 }
