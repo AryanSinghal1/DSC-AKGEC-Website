@@ -1,94 +1,53 @@
 // import images
-import eventImage1 from "../../assets/images/event_1.jpg";
+import eventImage1 from "../../assets/images/Events/gcp.jpg";
+import eventImage2 from "../../assets/images/Events/weekoflearning.jpg";
+import eventImage3 from "../../assets/images/Events/hackfest.jpg";
+import eventImage4 from "../../assets/images/Events/ASJ.jpg";
+import eventImage5 from "../../assets/images/Events/mlevent.jpg";
 
 export const EventsData = [
   {
-    id: 10,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
-    cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
-    cardHref: "/",
-    eventImg: eventImage1,
-  },
-  {
-    id: 9,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
-    cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
-    cardHref: "/",
-    eventImg: eventImage1,
-  },
-  {
-    id: 8,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
-    cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
-    cardHref: "/",
-    eventImg: eventImage1,
-  },
-  {
-    id: 7,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
-    cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
-    cardHref: "/",
-    eventImg: eventImage1,
-  },
-  {
-    id: 6,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
-    cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
-    cardHref: "/",
-    eventImg: eventImage1,
-  },
-  {
     id: 5,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
+    cardTitle: "ML Workshop",
+    cardSubtitle: "3 Jul 2021 - 6 Jul 2021",
     cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
+      "This workshop gives you the gist of python basics, algorithms used in machine learning and how to move forward in this domain. It is a 4-day hourly workshop. A competition planned at the end of the workshop for all the young minds to win some exciting goodies.",
     cardHref: "/",
-    eventImg: eventImage1,
+    eventImg: eventImage5,
   },
   {
     id: 4,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
+    cardTitle: "Android Study Jams",
+    cardSubtitle: "19 Dec - 23 Dec 2020",
     cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
+      "DSC-AKGEC brought 'Android Study Jams'. A chance for people who are new to android to learn how to build Android apps in Kotlin by following an online curriculum together with a study group. The workshop was for people who had prior experience in programming in any language. ",
     cardHref: "/",
-    eventImg: eventImage1,
+    eventImg: eventImage4,
   },
   {
     id: 3,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
+    cardTitle: "Hackfest",
+    cardSubtitle: "2 Oct 2020",
     cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
+      "This session was based on Introduction to Cybersecurity and CFTs by Mr. Sunny Mishra, one of the founding members and CTF player and works as a reverse engineer and exploit developer.This event was brought by DSC AKGEC in collaboration with DSC IGDTUW, DSC Indraprastha College for Women and DSC PGDAV.",
     cardHref: "/",
-    eventImg: eventImage1,
+    eventImg: eventImage3,
   },
   {
     id: 2,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
+    cardTitle: "Week Of Learning",
+    cardSubtitle: "27 Mar 2020 - 8 Apr 2020",
     cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
+      "An intensive week- long learning program from Propagate An online learning platform to learn Web Development from absolute basics and build the first project. Amazon vouchers, certificates for completion and goodies were provided.",
     cardHref: "/",
-    eventImg: eventImage1,
+    eventImg: eventImage2,
   },
   {
     id: 1,
-    cardTitle: "Github Workshop",
-    cardSubtitle: "11 October 2020",
+    cardTitle: "Google Cloud Platform",
+    cardSubtitle: "31 Oct 2019",
     cardText:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptates dicta mollitia numquam ab sit.",
+      "Contained 3 tracks: App and Web Development, Data Science, Machine Learning. Each track had 5 quests and 1 quest to be completed within a week. The eligible entries were evaluated by Google and successful entries received hoodies, badges, pens, stickers and swags.",
     cardHref: "/",
     eventImg: eventImage1,
   },

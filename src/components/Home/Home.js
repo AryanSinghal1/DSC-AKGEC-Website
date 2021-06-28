@@ -11,6 +11,7 @@ import ProjectsHome from "./ProjectsHome/ProjectsHome";
 import BlogHome from "./BlogHome/BlogHome";
 import TeamHome from "./TeamHome/TeamHome";
 import Footer from "../UI/Footer/Footer";
+import MapComponent from "./MapComponent/MapComponent";
 
 class Home extends Component {
   // componentDidMount() {
@@ -28,6 +29,7 @@ class Home extends Component {
         <ProjectsHome theme={this.props.theme} />
         {/* <BlogHome theme={this.props.theme} /> */}
         <TeamHome theme={this.props.theme} />
+        <MapComponent theme={this.props.theme} />
         <Footer theme={this.props.theme} />
       </div>
     );

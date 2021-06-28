@@ -1,6 +1,6 @@
 .Event {
   font-family: "Google Sans", sans-serif;
-  height: 530px;
+  /* height: 530px; */
   width: 380px;
   padding: 0 15px;
   background: none;
@@ -11,7 +11,7 @@
   background: linear-gradient(145deg, #24282f, #2b2f38);
   border-radius: 12px 12px 12px 12px;
   margin: 25px 0;
-  height: 480px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   transition: 0.2s;
@@ -29,9 +29,9 @@
 }
 
 .cardBody {
-  padding: 15px 30px;
+  padding: 10px 25px;
   margin: -10px 0 0;
-  height: 280px;
+  height: 350px;
   font-family: "Poppins", sans-serif;
   color: var(--dark-mode-text-color-soft-2);
   border-radius: 0 0 5px 5px;
@@ -58,6 +58,7 @@
 .cardText {
   margin-bottom: 1rem;
   transition: 0.2s;
+  font-size: 14px;
 }
 
 .cardBtn {

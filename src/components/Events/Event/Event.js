@@ -22,9 +22,9 @@ const Event = (props) => {
             <h3 className={styles.cardTitle}>{props.cardTitle}</h3>
             <h4 className={styles.cardSubtitle}>{props.cardSubtitle}</h4>
             <p className={styles.cardText}>{props.cardText}</p>
-            <a href={props.cardHref} className={styles.cardBtn}>
+            {/* <a href={props.cardHref} className={styles.cardBtn}>
               Learn More
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

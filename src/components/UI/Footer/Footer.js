@@ -31,19 +31,19 @@ const Footer = (props) => {
             <h5 className={styles.linkHeader}>Quick Links</h5>
             <ul className={styles.linkList}>
               <li>
-                <Link to="/">&rarr; Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/events">&rarr; Events</Link>
+                <Link to="/events"> Events</Link>
               </li>
               <li>
-                <Link to="/projects">&rarr; Projects</Link>
+                <Link to="/projects"> Projects</Link>
               </li>
               <li>
-                <Link to="/blog">&rarr; Blog</Link>
+                <Link to="/blog"> Blog</Link>
               </li>
               <li>
-                <Link to="/team">&rarr; Team</Link>
+                <Link to="/team"> Team</Link>
               </li>
             </ul>
           </div>

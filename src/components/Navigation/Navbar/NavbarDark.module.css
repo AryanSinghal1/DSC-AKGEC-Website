@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #242526;
+  background: var(--dark-mode);
   transition: 0.2s;
 }
 

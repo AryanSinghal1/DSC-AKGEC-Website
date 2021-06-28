@@ -1,6 +1,6 @@
 import React from "react";
 
-import dscLogo from "../../assets/Logo/Logo_1.svg";
+import dscLogo from "../../assets/Logo/Logo_1.png";
 import dscLogoDark from "../../assets/Logo/Logo_2.png";
 import classes from "./Logo.module.css";
 import classesDark from "./LogoDark.module.css";

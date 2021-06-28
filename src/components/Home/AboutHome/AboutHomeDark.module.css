@@ -125,7 +125,7 @@
 @media (max-width: 992px) {
   .Domains .card {
     padding: 2rem;
-    margin: 3rem 0;
+    margin: 0rem 0;
   }
   .Domains .DomainsImg {
     width: 300px;
@@ -154,8 +154,8 @@
     padding: 1rem 1rem 3rem 1rem;
   }
   .Domains .card {
-    padding: 0.7rem;
-    margin: 2rem 0;
+    padding: 2rem 0.7rem;
+    /* margin: 2rem 0; */
   }
   .Domains .DomainsImg {
     width: 250px;
@@ -189,8 +189,8 @@
     padding: 1rem 1rem 1rem 1rem;
   }
   .Domains .card {
-    padding: 1rem;
-    margin: 1.6rem 0;
+    padding: 1.6rem 1rem;
+    /* margin: 1.6rem 0; */
     text-align: center;
   }
   .Domains .DomainsImg {

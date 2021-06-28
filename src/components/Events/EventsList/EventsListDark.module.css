@@ -7,6 +7,6 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin: 3rem 0;
   justify-content: center;
 }

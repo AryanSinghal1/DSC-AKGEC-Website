@@ -17,8 +17,8 @@ const EventsList = (props) => {
     styles = classesDark;
   }
   return (
-    <div className={classes.EventsList}>
-      <div className={classes.wrapper}>
+    <div className={styles.EventsList}>
+      <div className={styles.wrapper}>
         {EventsData.map((Card) => {
           return (
             <Event

@@ -50,7 +50,10 @@ class Layout extends Component {
       <>
         <div>
           <Navbar switchTheme={this.themeToggler} theme={this.state.theme} />
-          <SideDrawer />
+          <SideDrawer
+            switchTheme={this.themeToggler}
+            theme={this.state.theme}
+          />
         </div>
         <div
           className={this.state.styles.Layout}
@@ -99,69 +102,3 @@ class Layout extends Component {
 }
 
 export default Layout;
-
-// return (
-//   <>
-//     <div>
-//       <Navbar />
-//       <SideDrawer />
-//     </div>
-//     <div
-//       className={classes.Layout}
-//       style={{ height: this.state.heightStyle }}
-//     >
-//       <Route
-//         render={({ location }) => (
-//           <TransitionGroup component={null}>
-//             <CSSTransition
-//               key={location.key}
-//               timeout={450}
-//               classNames="fade"
-//             >
-//               <Switch location={location}>
-//                 <Route
-//                   path="/"
-//                   exact
-//                   component={() => (
-//                     <Home setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//                 <Route
-//                   path="/events"
-//                   component={() => (
-//                     <Events setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//                 <Route
-//                   path="/projects"
-//                   component={() => (
-//                     <Projects setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//                 <Route
-//                   path="/blog"
-//                   component={() => (
-//                     <Blog setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//                 <Route
-//                   path="/team"
-//                   component={() => (
-//                     <Team setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//                 <Route
-//                   path="/contact"
-//                   component={() => (
-//                     <Contact setHeight={this.relativeHeightHandler} />
-//                   )}
-//                 />
-//               </Switch>
-//             </CSSTransition>
-//           </TransitionGroup>
-//         )}
-//       />
-//     </div>
-//     <Footer />
-//   </>
-// );
