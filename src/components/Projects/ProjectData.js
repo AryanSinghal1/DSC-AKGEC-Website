@@ -1,5 +1,6 @@
 //import image
 import GAN_IMG from "../../assets/images/Projects/GAN_IMG.png";
+import Workspace from "../../assets/images/Projects/Workspace.jpeg";
 
 export const ProjectData = [
   {
@@ -17,5 +18,21 @@ export const ProjectData = [
       github: "https://github.com/pranjul6386/GAN",
     },
     image: GAN_IMG,
+  },
+  {
+    id: 1,
+    name: "Workspace",
+    tags: {
+      web: ["HTML", "CSS", "JS", "JQuery", "Node.js"],
+      ml: [],
+      app: [],
+    },
+    members: ["Hitesh Tripathi", "Ayushi Bansal", "Krishna Agarwal"],
+    description:
+      "Its a website for a Startup idea , Workspace in which we will provide workspace to growing startups on the basis of there need , at low costs",
+    links: {
+      github: "/",
+    },
+    image: Workspace,
   },
 ];

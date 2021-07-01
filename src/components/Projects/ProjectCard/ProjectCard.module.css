@@ -16,22 +16,19 @@
 }
 
 .cardImg {
-  flex: 2;
+  /* flex: 2; */
   overflow: hidden;
   height: 380px;
   border-right: 0.5px solid var(--border-color);
   border-radius: 5px 0 0 5px;
   transition: 0.2s;
-  /* box-shadow: 0 2px 10px 1px #ddd; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .cardImg img {
   height: 100%;
   /* border-radius: 5px 0 0 5px; */
   transition: 0.2s;
+  object-fit: contain;
 }
 
 .cardBody {
@@ -242,6 +239,7 @@
   .cardBody {
     border-radius: 0 0 5px 5px;
     flex: 3;
+    order: 2;
   }
   .order {
     order: 1;
@@ -265,6 +263,9 @@
   }
   .cardBody {
     padding: 0.6rem;
+  }
+  .members {
+    width: 100%;
   }
   .cardHeader {
     font-size: 22px;

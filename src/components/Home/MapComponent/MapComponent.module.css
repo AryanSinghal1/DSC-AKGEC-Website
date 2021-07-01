@@ -21,22 +21,20 @@
 }
 
 @media (max-width: 991px) {
-  /* .mapdiv h2 {
-    font-size: 52px;
-  } */
   .mapdiv iframe {
+    height: 400px;
+  }
+  .iframediv {
     height: 400px;
   }
 }
 
 @media (max-width: 399px) {
-  /* .mapdiv h2  {
-    font-size: 36px;
-  } */
   .mapdiv iframe {
     height: 300px;
   }
   .iframediv {
     padding-bottom: 0;
+    height: 300px;
   }
 }

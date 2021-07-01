@@ -51,6 +51,23 @@ const TeamList = (props) => {
     return null;
   });
 
+  const secondYearList = TeamData.map((member) => {
+    if (member.year === 2) {
+      return (
+        <TeamMember
+          key={member.id}
+          cardName={member.cardName}
+          cardDesignation={member.cardDesignation}
+          image={member.image}
+          links={member.links}
+          domain={member.domain}
+          theme={props.theme}
+        />
+      );
+    }
+    return null;
+  });
+
   return (
     <div className={styles.TeamList}>
       <div className={styles.section}>
@@ -60,6 +77,10 @@ const TeamList = (props) => {
       <div className={styles.section}>
         <h1 className={styles.teamListHeader}>Members from 3rd Year</h1>
         <div className={styles.listContainer}>{thirdYearList}</div>
+      </div>
+      <div className={styles.section}>
+        <h1 className={styles.teamListHeader}>Members from 2nd Year</h1>
+        <div className={styles.listContainer}>{secondYearList}</div>
       </div>
     </div>
   );

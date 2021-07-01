@@ -53,20 +53,20 @@ const TeamMember = (props) => {
             <h2 className={styles.cardDesignation}>{props.cardDesignation}</h2>
             <ul className={styles.linkList}>
               <li>
-                <a href={props.links.github}>
+                <a href={props.links.github} target={"_blank"}>
                   <FiIcons.FiGithub className={svgClassDomain} />
                 </a>
               </li>
               <li>
-                <a href={props.links.linkedin}>
+                <a href={props.links.linkedin} target={"_blank"}>
                   <FiIcons.FiLinkedin className={svgClassDomain} />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href={props.links.instagram}>
                   <FiIcons.FiInstagram className={svgClassDomain} />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

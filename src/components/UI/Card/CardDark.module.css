@@ -1,6 +1,3 @@
-/*HOVER COLOR #e4eefc
-  #e8f0fe */
-
 .card {
   background: var(--dark-mode-neu-bg);
   box-shadow: var(--dark-mode-neu-box-shadow);
@@ -8,17 +5,23 @@
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  margin-right: 20px;
+  margin-right: 10px;
   transition: 0.2s;
   /* z-index: 1; */
+}
+
+.card:not(:last-child) {
+  margin-right: 20px;
 }
 
 .card .cardImage {
   position: relative;
   width: 100%;
+  height: 250px;
   border-radius: 15px 15px 0 0;
   overflow: hidden;
   display: inline-block;
+  object-fit: cover;
 }
 
 .cardHeader {
@@ -36,7 +39,7 @@
   color: var(--dark-mode-text-color-1);
 }
 .cardBody {
-  padding: 1rem 1.4rem 2rem 1.4rem;
+  padding: 1rem 1.4rem 1.2rem 1.4rem;
   text-align: left;
   color: var(--dark-mode-text-color-soft-2);
   transition: 0.2s;
@@ -44,10 +47,10 @@
 
 .cardBody p {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   padding-bottom: 1rem;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: justify;
   transition: 0.2s;
 }
@@ -90,42 +93,49 @@
 }
 
 @media (max-width: 991px) {
+  .card:not(:last-child) {
+    margin-right: 0;
+  }
+  .card {
+    margin: 0 10px;
+  }
+  .card .cardImage {
+    height: 220px;
+  }
+  .cardBody {
+    padding: 0.8rem 1rem 0.8rem 1rem;
+  }
   .cardHeader {
-    font-size: 22px;
+    font-size: 20px;
   }
   .cardBody p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .cardBody .btn {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 991px) {
-  .cardHeader {
-    font-size: 22px;
-  }
-  .cardBody p {
-    font-size: 15px;
-  }
-  .cardBody .btn {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 785px) {
   .card {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  .card .cardImage {
+    height: 240px;
   }
   .cardHeader {
-    font-size: 22px;
+    font-size: 20px;
+  }
+  .cardBody {
+    padding: 1rem 1.2rem 1rem 1.2rem;
   }
   .cardBody p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .cardBody .btn {
-    font-size: 14px;
+    padding: 0 16px;
+    font-size: 12px;
   }
 }
 
@@ -135,16 +145,16 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
+  .card .cardImage {
+    height: 200px;
+  }
   .cardHeader {
-    font-size: 20px;
+    font-size: 18px;
   }
   .cardBody p {
-    font-size: 14px;
-  }
-  .cardBody .btn {
-    font-size: 14px;
+    font-size: 12px;
   }
   .cardBody {
-    padding: 0.9rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
   }
 }

@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import classes from "./EventsHome.module.css";
 import classesDark from "./EventsHomeDark.module.css";
 
+//Events data
+import { EventsData } from "../../Events/EventsData";
+
 //image import
 import image1 from "../../../assets/images/events.jpg";
 
 //import component
-// import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 
 const EventsHome = (props) => {
@@ -19,36 +21,30 @@ const EventsHome = (props) => {
   } else {
     styles = classesDark;
   }
+
+  let cnt = 0;
+  const renderList = [];
+  EventsData.forEach((data) => {
+    if (cnt < 3) {
+      renderList.push(
+        <Card
+          key={data.id}
+          eventImg={data.eventImg}
+          cardTitle={data.cardTitle}
+          cardSubtitle={data.cardSubtitle}
+          cardText={data.cardText}
+          cardHref={data.cardHref}
+          theme={props.theme}
+        />
+      );
+    }
+    cnt++;
+  });
   return (
     <div className={styles.EventsHome}>
       <div className={styles.Container}>
         <h1>Recent Events</h1>
-        <div className={styles.cardList}>
-          <Card image={image1} href="/" theme={props.theme}>
-            <>Card 1</>
-            <>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              dolores nostrum quos voluptatum culpa ipsam nemo repellat ad
-              quisquam omnis?
-            </>
-          </Card>
-          <Card image={image1} href="/" theme={props.theme}>
-            <>Card 2</>
-            <>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              dolores nostrum quos voluptatum culpa ipsam nemo repellat ad
-              quisquam omnis?
-            </>
-          </Card>
-          <Card image={image1} href="/" theme={props.theme}>
-            <>Card 3</>
-            <>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              dolores nostrum quos voluptatum culpa ipsam nemo repellat ad
-              quisquam omnis?
-            </>
-          </Card>
-        </div>
+        <div className={styles.cardList}>{renderList}</div>
         <Link to="/events" className={styles.eventBtn}>
           SEE MORE
         </Link>

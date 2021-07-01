@@ -15,7 +15,7 @@
 }
 
 .cardImg {
-  flex: 2;
+  /* flex: 2; */
   overflow: hidden;
   height: 380px;
   border-radius: 5px 0 0 5px;
@@ -235,6 +235,7 @@
   .cardBody {
     border-radius: 0 0 5px 5px;
     flex: 3;
+    order: 2;
   }
   .order {
     order: 1;
@@ -255,6 +256,9 @@
   .cardImg {
     /* height: 200px; */
     width: 280px;
+  }
+  .members {
+    width: 100%;
   }
   .cardBody {
     padding: 0.6rem;
