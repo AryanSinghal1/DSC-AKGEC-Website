@@ -38,6 +38,10 @@
   transition: 0.2s;
 }
 
+.cardTitleLink {
+  text-decoration: none;
+}
+
 .cardTitle {
   font-size: 22px;
   font-weight: 500;

@@ -20,11 +20,11 @@ const Card = (props) => {
         className={styles.cardImage}
       />
       <div className={styles.cardBody}>
-        <a href={props.cardHref}>
+        <a href={props.cardHref} target={"_blank"}>
           <h3 className={styles.cardHeader}>{props.cardTitle}</h3>
         </a>
         <p>{props.cardText}</p>
-        <a href={props.cardHref} className={styles.btn}>
+        <a href={props.cardHref} className={styles.btn} target={"_blank"}>
           Read
         </a>
       </div>
