@@ -17,25 +17,38 @@
   transition: 0.2s;
 }
 
+.alumniBatchHeader {
+  font-weight: 600;
+  padding: 3rem;
+}
+
 .section {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 2rem;
 }
 
-/* .section:last-child {
+.section:last-child {
   border-bottom: none;
-} */
+}
 
 @media (max-width: 704px) {
   .teamListHeader {
     text-align: center;
-    font-size: 28px;
-    padding: 2rem 0;
+    font-size: 30px;
+    padding: 2rem 0 1.5rem 0;
+  }
+  .alumniBatchHeader {
+    text-align: center;
+    font-size: 22px;
+    padding: 1rem 0;
   }
 }
 
 @media (max-width: 350px) {
   .teamListHeader {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .alumniBatchHeader {
+    font-size: 18px;
   }
 }

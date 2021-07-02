@@ -28,6 +28,13 @@ import Tashi from "../../assets/images/team/Tashi.jpg";
 import Vibhuti from "../../assets/images/team/Vibhuti.jpg";
 import Krishna from "../../assets/images/team/Krishna.jpeg";
 import Apoorv from "../../assets/images/team/Apoorv.jpg";
+import VisheshD from "../../assets/images/team/VisheshD.jpeg";
+import MansiGoel from "../../assets/images/team/MansiG.jpg";
+import NihalMB from "../../assets/images/team/Nihal.jpg";
+import Rishabh from "../../assets/images/team/Rishabh.jpeg";
+import ShivamB from "../../assets/images/team/ShivamB.jpg";
+import Tarun from "../../assets/images/team/TarunR.jpg";
+import AyushiB from "../../assets/images/team/AyushiB.jpg";
 
 export const TeamData = [
   {
@@ -36,10 +43,10 @@ export const TeamData = [
     year: 4,
     cardName: "Mansi Goel",
     cardDesignation: "Manegerial",
-    image: person1,
+    image: MansiGoel,
     links: {
       github: "/",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/mansigoel222175191/",
       instagram: "/",
       behance: "/",
     },
@@ -78,10 +85,10 @@ export const TeamData = [
     domain: 4,
     cardName: "Ayushi Bansal",
     cardDesignation: "Managerial",
-    image: person1,
+    image: AyushiB,
     links: {
       github: "/",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/ayushi-bansal-4291601b6/",
       instagram: "/",
       behance: "/",
     },
@@ -123,7 +130,7 @@ export const TeamData = [
     image: Krishna,
     links: {
       github: "https://github.com/krxxnna",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/krishna-a-34427b131/",
       instagram: "/",
       behance: "/",
     },
@@ -134,10 +141,10 @@ export const TeamData = [
     domain: 2,
     cardName: "Nihal MB Choudhary",
     cardDesignation: "Machine Learning",
-    image: person1,
+    image: NihalMB,
     links: {
       github: "https://github.com/nihalmb",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/nihal-mb-choudhary-b261061b6/",
       instagram: "/",
       behance: "/",
     },
@@ -165,7 +172,7 @@ export const TeamData = [
     image: PranjulItondia,
     links: {
       github: "/",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/pranjul-itondia-70912317b/",
       instagram: "/",
       behance: "/",
     },
@@ -177,10 +184,10 @@ export const TeamData = [
     domain: 3,
     cardName: "Rishabh Singh",
     cardDesignation: "App Development",
-    image: person1,
+    image: Rishabh,
     links: {
       github: "/",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/workwithrishabh/",
       instagram: "/",
       behance: "/",
     },
@@ -202,6 +209,20 @@ export const TeamData = [
   {
     id: 13,
     year: 3,
+    domain: 1,
+    cardName: "Shivam Bisht",
+    cardDesignation: "Web Development",
+    image: ShivamB,
+    links: {
+      github: "https://github.com/shivam-S-bisht",
+      linkedin: "https://www.linkedin.com/in/shivambisht2001/",
+      instagram: "/",
+      behance: "/",
+    },
+  },
+  {
+    id: 14,
+    year: 3,
     domain: 4,
     cardName: "Shubh Shah",
     cardDesignation: "Managerial",
@@ -213,23 +234,37 @@ export const TeamData = [
       behance: "/",
     },
   },
+  {
+    id: 15,
+    year: 3,
+    domain: 2,
+    cardName: "Tarun Raghav",
+    cardDesignation: "Machine Learning",
+    image: Tarun,
+    links: {
+      github: "/",
+      linkedin: "https://www.linkedin.com/in/imtarunraghav/",
+      instagram: "/",
+      behance: "/",
+    },
+  },
 
   {
-    id: 14,
+    id: 16,
     year: 3,
     domain: 1,
     cardName: "Vishesh Dhawan",
     cardDesignation: "Web Development",
-    image: person1,
+    image: VisheshD,
     links: {
       github: "https://github.com/visheshdvn",
-      linkedin: "/",
+      linkedin: "https://www.linkedin.com/in/visheshdvn/",
       instagram: "/",
       behance: "/",
     },
   },
   {
-    id: 15,
+    id: 17,
     year: 3,
     domain: 2,
     cardName: "Vishesh Kushwaha",
@@ -244,7 +279,7 @@ export const TeamData = [
   },
 
   {
-    id: 16,
+    id: 18,
     year: 2,
     domain: 1,
     cardName: "Aagiya Singh",
@@ -258,14 +293,14 @@ export const TeamData = [
     },
   },
   {
-    id: 17,
+    id: 19,
     year: 2,
     domain: 1,
     cardName: "Aashima Saxena",
     cardDesignation: "Web Development",
     image: Aashima,
     links: {
-      github: "/",
+      github: "https://github.com/aashimasaxena91",
       linkedin: "https://www.linkedin.com/in/aashima-saxena-976554159",
       instagram: "/",
       behance: "/",
@@ -273,7 +308,7 @@ export const TeamData = [
   },
 
   {
-    id: 18,
+    id: 20,
     year: 2,
     domain: 3,
     cardName: "Adnan Ali",
@@ -287,7 +322,7 @@ export const TeamData = [
     },
   },
   {
-    id: 19,
+    id: 21,
     year: 2,
     domain: 1,
     cardName: "Anuj Negi",
@@ -302,7 +337,7 @@ export const TeamData = [
   },
 
   {
-    id: 20,
+    id: 22,
     year: 2,
     domain: 1,
     cardName: "Anushree Gupta",
@@ -316,7 +351,7 @@ export const TeamData = [
     },
   },
   {
-    id: 21,
+    id: 23,
     year: 2,
     domain: 3,
     cardName: "Apra Jain",
@@ -331,7 +366,7 @@ export const TeamData = [
   },
 
   {
-    id: 22,
+    id: 24,
     year: 2,
     domain: 3,
     cardName: "Arpit Chauhan",
@@ -345,7 +380,7 @@ export const TeamData = [
     },
   },
   {
-    id: 23,
+    id: 25,
     year: 2,
     domain: 2,
     cardName: "Malay Joshi",
@@ -360,14 +395,14 @@ export const TeamData = [
   },
 
   {
-    id: 24,
+    id: 26,
     year: 2,
     domain: 1,
     cardName: "Manish Dixit",
     cardDesignation: "Web Development",
     image: ManishDixit,
     links: {
-      github: "/",
+      github: "https://github.com/manishdxt",
       linkedin: "https://www.linkedin.com/in/manish-dixit-11b6b0196",
       instagram: "/",
       behance: "/",
@@ -375,7 +410,7 @@ export const TeamData = [
   },
 
   {
-    id: 25,
+    id: 27,
     year: 2,
     domain: 3,
     cardName: "Manish Kumar",
@@ -389,14 +424,14 @@ export const TeamData = [
     },
   },
   {
-    id: 26,
+    id: 28,
     year: 2,
     domain: 2,
-    cardName: "Manya",
+    cardName: "Manya Chaudhary",
     cardDesignation: "Machine Learning",
     image: Manya,
     links: {
-      github: "/",
+      github: "https://github.com/ManyaChdry",
       linkedin: "/",
       instagram: "/",
       behance: "/",
@@ -404,7 +439,7 @@ export const TeamData = [
   },
 
   {
-    id: 27,
+    id: 29,
     year: 2,
     domain: 1,
     cardName: "Preeti Jaiswal",
@@ -419,7 +454,7 @@ export const TeamData = [
   },
 
   {
-    id: 28,
+    id: 30,
     year: 2,
     domain: 4,
     cardName: "Shivani Khare",
@@ -434,7 +469,7 @@ export const TeamData = [
   },
 
   {
-    id: 29,
+    id: 31,
     year: 2,
     domain: 2,
     cardName: "Shreyanshi Singh",
@@ -449,7 +484,7 @@ export const TeamData = [
   },
 
   {
-    id: 30,
+    id: 32,
     year: 2,
     domain: 4,
     cardName: "Shubhangi Shukla",
@@ -464,7 +499,7 @@ export const TeamData = [
   },
 
   {
-    id: 31,
+    id: 33,
     year: 2,
     domain: 1,
     cardName: "Sudheer Singh",
@@ -479,7 +514,7 @@ export const TeamData = [
   },
 
   {
-    id: 32,
+    id: 34,
     year: 2,
     domain: 2,
     cardName: "Tashi Gautam",
@@ -494,7 +529,7 @@ export const TeamData = [
   },
 
   {
-    id: 33,
+    id: 35,
     year: 2,
     domain: 4,
     cardName: "Vibhuti Agarwal",

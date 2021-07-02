@@ -7,6 +7,7 @@ import classesDark from "./TeamDark.module.css";
 //import Component
 import ShowcaseTeam from "./ShowcaseTeam/ShowcaseTeam";
 import TeamList from "./TeamList/TeamList";
+import AlumniList from "./Alumni/AlumniList/AlumniList";
 import Footer from "../UI/Footer/Footer";
 
 class Team extends React.Component {
@@ -26,6 +27,7 @@ class Team extends React.Component {
       <div className={styles.Team}>
         <ShowcaseTeam theme={this.props.theme} />
         <TeamList theme={this.props.theme} />
+        <AlumniList theme={this.props.theme} />
         <Footer theme={this.props.theme} />
       </div>
     );

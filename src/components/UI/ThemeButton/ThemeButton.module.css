@@ -16,6 +16,9 @@
   cursor: pointer;
   transform: translateY(-2px);
 }
+.ThemeButton:focus-visible {
+  outline: none;
+}
 
 @media (max-width: 450px) {
   .ThemeButton {

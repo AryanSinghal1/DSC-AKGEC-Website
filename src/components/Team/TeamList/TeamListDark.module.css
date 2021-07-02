@@ -23,9 +23,9 @@
   padding-bottom: 2rem;
 }
 
-.section:last-child {
+/* .section:last-child {
   border-bottom: none;
-}
+} */
 
 @media (max-width: 704px) {
   .teamListHeader {
