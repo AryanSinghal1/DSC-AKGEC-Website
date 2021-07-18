@@ -9,7 +9,7 @@ import Shubh from "../../assets/images/team/Shubh.jpg";
 import VisheshK from "../../assets/images/team/VisheshK.png";
 import Aagiya from "../../assets/images/team/Aagiya.jpg";
 import Aashima from "../../assets/images/team/Aashima.jpg";
-import Adnan from "../../assets/images/team/Adnan.jpg";
+import Adnan from "../../assets/images/team/Adnan.jpeg";
 import Anuj from "../../assets/images/team/Anuj.jpeg";
 import Anushree from "../../assets/images/team/Anushree.jpeg";
 import Apra from "../../assets/images/team/Apra.jpeg";

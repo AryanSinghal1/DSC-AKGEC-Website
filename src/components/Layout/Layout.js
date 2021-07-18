@@ -29,10 +29,30 @@ class Layout extends Component {
     this.themeToggler = this.themeToggler.bind(this);
   }
 
+  componentDidMount() {
+    if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "true");
+    } else {
+      if (localStorage.getItem("theme") === "true") {
+        this.setState({ theme: true });
+        this.setState({ styles: classes });
+      } else {
+        this.setState({ theme: false });
+        this.setState({ styles: classesDark });
+      }
+    }
+  }
+
   themeToggler() {
     this.state.theme === true
       ? this.setState({ theme: false })
       : this.setState({ theme: true });
+
+    if (this.state.theme === true) {
+      localStorage.setItem("theme", "false");
+    } else {
+      localStorage.setItem("theme", "true");
+    }
 
     if (this.state.theme) {
       this.setState({ styles: classes });

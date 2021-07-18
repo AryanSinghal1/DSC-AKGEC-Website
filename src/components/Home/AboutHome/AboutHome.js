@@ -37,7 +37,7 @@ const AboutHome = (props) => {
               are a passionate group of people who work towards bringing a
               change in the ecosystem of development around the campus. We want
               to create a healthy environment for the budding developers to
-              create solutions to real life problems and promote the
+              exploring solutions to real life problems and promote the
               <strong>&nbsp;developer culture</strong>.
             </p>
             <img src={about} className={styles.AboutHomeImg} alt="" />
@@ -50,10 +50,11 @@ const AboutHome = (props) => {
               <div className={styles.cardBody}>
                 <h3 className={blueHeader.join(" ")}>Web Development</h3>
                 <p className={styles.cardText}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Explicabo dolorem necessitatibus, quaerat repudiandae aliquam
-                  maxime vitae rem, minus aperiam dolorum dolore labore, laborum
-                  cum voluptatum architecto. Fuga ipsam ex qui.
+                  In this domain, we concentrate on developing and maintaining
+                  websites to solve real time problems. For any website, it's
+                  the work that happens behind the scenes to make a website look
+                  great, work fast and perform well with a seamless user
+                  experience.
                 </p>
               </div>
               <img
@@ -68,10 +69,10 @@ const AboutHome = (props) => {
               <div className={styles.cardBody}>
                 <h3 className={redHeader.join(" ")}>Machine Learning</h3>
                 <p className={styles.cardText}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Explicabo dolorem necessitatibus, quaerat repudiandae aliquam
-                  maxime vitae rem, minus aperiam dolorum dolore labore, laborum
-                  cum voluptatum architecto. Fuga ipsam ex qui.
+                  Machine learning is the burning topic of the market. It is an
+                  application of artificial intelligence (AI) that provides
+                  systems, the ability to automatically learn and improve from
+                  experience without being explicitly programmed.
                 </p>
               </div>
               <img
@@ -86,10 +87,9 @@ const AboutHome = (props) => {
               <div className={styles.cardBody}>
                 <h3 className={yellowHeader.join(" ")}>App Development</h3>
                 <p className={styles.cardText}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Explicabo dolorem necessitatibus, quaerat repudiandae aliquam
-                  maxime vitae rem, minus aperiam dolorum dolore labore, laborum
-                  cum voluptatum architecto. Fuga ipsam ex qui.
+                  Mobile app development has been steadily growing, in revenues
+                  and jobs created. In this domain and all others, we encourage
+                  all to keep practising and be their best selves.
                 </p>
               </div>
               <img
@@ -104,10 +104,11 @@ const AboutHome = (props) => {
               <div className={styles.cardBody}>
                 <h3 className={greenHeader.join(" ")}>Management</h3>
                 <p className={styles.cardText}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Explicabo dolorem necessitatibus, quaerat repudiandae aliquam
-                  maxime vitae rem, minus aperiam dolorum dolore labore, laborum
-                  cum voluptatum architecto. Fuga ipsam ex qui.
+                  For the growth of all and to bring chances for all the domains
+                  to excel and also develop teamwork skills, we provide
+                  managerial domain to increase the productivity of all our
+                  members by being the face of this society and bring forth new
+                  projects.
                 </p>
               </div>
               <img

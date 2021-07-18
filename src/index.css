@@ -48,6 +48,7 @@
   --dark-mode-bg-9: #222222;
   --dark-mode-text-color-1: #fff;
   --dark-mode-text-color-2: #eee;
+  --dark-mode-text-color-3: #ddd;
 
   /* dark mode neumorphism */
   --dark-mode-neu-bg: linear-gradient(145deg, #383d42, #2f3338);
