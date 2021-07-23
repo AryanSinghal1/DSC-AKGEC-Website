@@ -16,8 +16,9 @@ const ShowcaseEvents = (props) => {
       <div className={styles.Container}>
         <h1 className={styles.eventsHeading}>Events</h1>
         <p className={styles.eventsInfo}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          aut?
+          The main motive behind each and every event DSC-AKGEC has conducted
+          has always been spreading knowledge and giving inspiration to
+          developers.
         </p>
       </div>
     </div>

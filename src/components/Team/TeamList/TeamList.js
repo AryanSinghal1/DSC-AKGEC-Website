@@ -17,6 +17,25 @@ const TeamList = (props) => {
   } else {
     styles = classesDark;
   }
+
+  const Lead = TeamData.map((member) => {
+    if (member.year === 0) {
+      return (
+        <TeamMember
+          key={member.id}
+          cardName={member.cardName}
+          cardDesignation={member.cardDesignation}
+          image={member.image}
+          links={member.links}
+          domain={member.domain}
+          theme={props.theme}
+        />
+      );
+    }
+    return null;
+  });
+
+  let cnt4 = 0;
   const fourthYearList = TeamData.map((member) => {
     if (member.year === 4) {
       return (
@@ -31,9 +50,11 @@ const TeamList = (props) => {
         />
       );
     }
+    cnt4++;
     return null;
   });
 
+  let cnt3 = 0;
   const thirdYearList = TeamData.map((member) => {
     if (member.year === 3) {
       return (
@@ -48,9 +69,11 @@ const TeamList = (props) => {
         />
       );
     }
+    cnt3++;
     return null;
   });
 
+  let cnt2 = 0;
   const secondYearList = TeamData.map((member) => {
     if (member.year === 2) {
       return (
@@ -65,23 +88,34 @@ const TeamList = (props) => {
         />
       );
     }
+    cnt2++;
     return null;
   });
 
   return (
     <div className={styles.TeamList}>
       <div className={styles.section}>
-        <h1 className={styles.teamListHeader}>Members from 4th Year</h1>
-        <div className={styles.listContainer}>{fourthYearList}</div>
+        <h1 className={styles.teamListHeader}>Dsc Lead 2021</h1>
+        <div className={styles.listContainer}>{Lead}</div>
       </div>
-      <div className={styles.section}>
-        <h1 className={styles.teamListHeader}>Members from 3rd Year</h1>
-        <div className={styles.listContainer}>{thirdYearList}</div>
-      </div>
-      <div className={styles.section}>
-        <h1 className={styles.teamListHeader}>Members from 2nd Year</h1>
-        <div className={styles.listContainer}>{secondYearList}</div>
-      </div>
+      {cnt4 !== fourthYearList.length && (
+        <div className={styles.section}>
+          <h1 className={styles.teamListHeader}>Members from 4th Year</h1>
+          <div className={styles.listContainer}>{fourthYearList}</div>
+        </div>
+      )}
+      {cnt3 !== thirdYearList.length && (
+        <div className={styles.section}>
+          <h1 className={styles.teamListHeader}>Members from 3rd Year</h1>
+          <div className={styles.listContainer}>{thirdYearList}</div>
+        </div>
+      )}
+      {cnt2 !== secondYearList.length && (
+        <div className={styles.section}>
+          <h1 className={styles.teamListHeader}>Members from 2nd Year</h1>
+          <div className={styles.listContainer}>{secondYearList}</div>
+        </div>
+      )}
     </div>
   );
 };

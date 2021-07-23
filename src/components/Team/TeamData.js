@@ -29,7 +29,6 @@ import Vibhuti from "../../assets/images/team/Vibhuti.jpg";
 import Krishna from "../../assets/images/team/Krishna.jpeg";
 import Apoorv from "../../assets/images/team/Apoorv.jpg";
 import VisheshD from "../../assets/images/team/VisheshD.jpeg";
-import MansiGoel from "../../assets/images/team/MansiG.jpg";
 import NihalMB from "../../assets/images/team/Nihal.jpg";
 import Rishabh from "../../assets/images/team/Rishabh.jpeg";
 import ShivamB from "../../assets/images/team/ShivamB.jpg";
@@ -39,14 +38,14 @@ import AyushiB from "../../assets/images/team/AyushiB.jpg";
 export const TeamData = [
   {
     id: 1,
-    domain: 4,
-    year: 4,
-    cardName: "Mansi Goel",
-    cardDesignation: "Manegerial",
-    image: MansiGoel,
+    year: 0,
+    domain: 2,
+    cardName: "Tashi Gautam",
+    cardDesignation: "Machine Learning",
+    image: Tashi,
     links: {
-      github: "/",
-      linkedin: "https://www.linkedin.com/in/mansigoel222175191/",
+      github: "https://github.com/tashi2408",
+      linkedin: "https://www.linkedin.com/in/tashi-gautam-77b95b1b6/",
       instagram: "/",
       behance: "/",
     },
@@ -512,24 +511,8 @@ export const TeamData = [
       behance: "/",
     },
   },
-
   {
     id: 34,
-    year: 2,
-    domain: 2,
-    cardName: "Tashi Gautam",
-    cardDesignation: "Machine Learning",
-    image: Tashi,
-    links: {
-      github: "https://github.com/tashi2408",
-      linkedin: "https://www.linkedin.com/in/tashi-gautam-77b95b1b6/",
-      instagram: "/",
-      behance: "/",
-    },
-  },
-
-  {
-    id: 35,
     year: 2,
     domain: 4,
     cardName: "Vibhuti Agarwal",

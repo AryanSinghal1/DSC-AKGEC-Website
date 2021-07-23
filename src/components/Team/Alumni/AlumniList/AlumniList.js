@@ -17,8 +17,26 @@ const AlumniList = (props) => {
   } else {
     styles = classesDark;
   }
-  const alumniList = AlumniData.map((member) => {
-    if (member.year === 5) {
+
+  const alumniList2020 = AlumniData.map((member) => {
+    if (member.year === 2020) {
+      return (
+        <AlumniMember
+          key={member.id}
+          cardName={member.cardName}
+          cardDesignation={member.cardDesignation}
+          image={member.image}
+          links={member.links}
+          domain={member.domain}
+          theme={props.theme}
+        />
+      );
+    }
+    return null;
+  });
+
+  const alumniList2021 = AlumniData.map((member) => {
+    if (member.year === 2021) {
       return (
         <AlumniMember
           key={member.id}
@@ -38,8 +56,10 @@ const AlumniList = (props) => {
     <div className={styles.TeamList}>
       <div className={styles.section}>
         <h1 className={styles.teamListHeader}>Alumni</h1>
+        <h2 className={styles.alumniBatchHeader}>Batch (2017-21)</h2>
+        <div className={styles.listContainer}>{alumniList2021}</div>
         <h2 className={styles.alumniBatchHeader}>Batch (2016-20)</h2>
-        <div className={styles.listContainer}>{alumniList}</div>
+        <div className={styles.listContainer}>{alumniList2020}</div>
       </div>
     </div>
   );

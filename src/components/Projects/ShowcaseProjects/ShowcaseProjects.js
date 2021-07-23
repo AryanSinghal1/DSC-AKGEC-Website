@@ -17,9 +17,8 @@ const ShowcaseProjects = (props) => {
         <div className={styles.topContent}>
           <h1 className={styles.projectsHeader}>Projects</h1>
           <p className={styles.projectsText}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-            magni accusantium neque et veniam laudantium ratione voluptate
-            dolorum officia tempora!
+            Our team has worked upon a lot of creative projects, turning ideas
+            into reality.
           </p>
         </div>
       </div>
