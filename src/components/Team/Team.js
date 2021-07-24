@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // import css
 import classes from "./Team.module.css";
@@ -25,6 +26,25 @@ class Team extends React.Component {
     }
     return (
       <div className={styles.Team}>
+        <Helmet>
+          <title>DSC | AKGEC | Team</title>
+          <meta
+            name="description"
+            content="Developer Student Clubs AKGEC Team"
+          />
+          <meta property="og:title" content="DSC AKGEC" />
+          <meta property="og:type" content="team.members.sociallinks" />
+          <meta property="og:url" content="https://dscakgec.org/team" />
+          <meta
+            property="og:image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
+          <meta
+            property="og:description"
+            content="Every member of the society has always been passionate and hard working towards their goal, creating a positive work environment. Their support and will to help each other out in every way possible is what makes DSC-AkGEC a ‘team’."
+          />
+        </Helmet>
+
         <ShowcaseTeam theme={this.props.theme} />
         <TeamList theme={this.props.theme} />
         <AlumniList theme={this.props.theme} />

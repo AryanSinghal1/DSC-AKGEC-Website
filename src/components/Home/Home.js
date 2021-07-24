@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 
 //import css
 import classes from "./Home.module.css";
@@ -23,6 +24,32 @@ class Home extends Component {
   render() {
     return (
       <div className={classes.Home}>
+        <Helmet>
+          <title>DSC | AKGEC</title>
+          <meta
+            name="description"
+            content="Developer Student Clubs AKGEC Ghaziabad"
+          />
+          <meta
+            name="keywords"
+            content="DSC AKGEC, Events, Machine Learning, Web Development, App Development "
+          />
+          <meta property="og:title" content="DSC AKGEC" />
+          <meta
+            property="og:type"
+            content="about.domains.events.projects.team.location"
+          />
+          <meta property="og:url" content="https://dscakgec.org/" />
+          <meta
+            property="og:image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
+          <meta
+            property="og:description"
+            content="We at DSC-AKGEC are a passionate group of people who work towards bringing a change in the ecosystem of development around the campus. We want to create a healthy environment for the budding developers to exploring solutions to real life problems and promote the developer culture."
+          />
+        </Helmet>
+
         <ShowcaseHome theme={this.props.theme} />
         <AboutHome theme={this.props.theme} />
         <EventsHome theme={this.props.theme} />

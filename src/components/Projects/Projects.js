@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // import css
 import classes from "./Projects.module.css";
@@ -24,6 +25,25 @@ class Projects extends React.Component {
     }
     return (
       <div className={styles.Projects}>
+        <Helmet>
+          <title>DSC | AKGEC | Projects</title>
+          <meta
+            name="description"
+            content="Developer Student Clubs AKGEC Projects"
+          />
+          <meta property="og:title" content="DSC AKGEC" />
+          <meta property="og:type" content="project.technology.article" />
+          <meta property="og:url" content="https://dscakgec.org/projects" />
+          <meta
+            property="og:image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
+          <meta
+            property="og:description"
+            content="Our team has worked upon a lot of creative projects, turning ideas into reality."
+          />
+        </Helmet>
+
         <ShowcaseProjects theme={this.props.theme} />
         <ProjectsList theme={this.props.theme} />
         <Footer theme={this.props.theme} />
