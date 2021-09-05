@@ -2,6 +2,7 @@ import React from "react";
 
 //import css
 import classes from "./Contact.module.css";
+import classesDark from "./ContactDark.module.css";
 
 // import component
 import ShowcaseContact from "./ShowcaseContact/ShowcaseContact";
@@ -15,10 +16,16 @@ class Contact extends React.Component {
   // }
 
   render() {
+    let styles = classes;
+    if (this.props.theme) {
+      styles = classes;
+    } else {
+      styles = classesDark;
+    }
     return (
-      <div className={classes.Contact}>
-        <ShowcaseContact />
-        <Footer />
+      <div className={styles.Contact}>
+        <ShowcaseContact theme={this.props.theme} />
+        <Footer theme={this.props.theme} />
       </div>
     );
   }

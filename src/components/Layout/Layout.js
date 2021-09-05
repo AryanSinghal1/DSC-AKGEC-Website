@@ -11,7 +11,7 @@ import Navbar from "../Navigation/Navbar/Navbar";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 import Home from "../Home/Home";
 import Events from "../Events/Events";
-// import Contact from "../Contact/Contact";
+import Contact from "../Contact/Contact";
 import Team from "../Team/Team";
 import Projects from "../Projects/Projects";
 import Blog from "../Blog/Blog";
@@ -106,7 +106,10 @@ class Layout extends Component {
                       path="/team"
                       component={() => <Team theme={this.state.theme} />}
                     />
-                    {/* <Route path="/contact" component={Contact} /> */}
+                    <Route
+                      path="/contact"
+                      component={() => <Contact theme={this.state.theme} />}
+                    />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

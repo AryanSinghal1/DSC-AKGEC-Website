@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 //import css
 import classes from "./ShowcaseContact.module.css";
+import classesDark from "./ShowcaseContactDark.module.css";
 
 //image import
 import registerImg from "../../../assets/images/register.png";
@@ -18,21 +19,28 @@ const ShowcaseContact = (props) => {
     setIsSubmitted(true);
   }
 
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
+
   return (
-    <div className={classes.ShowcaseContact}>
-      <div className={classes.Container}>
-        <h1 className={classes.registerHeader}>Registration Open</h1>
-        <div className={classes.wrapper}>
+    <div className={styles.ShowcaseContact}>
+      <div className={styles.Container}>
+        <h1 className={styles.registerHeader}>Registration Open</h1>
+        <div className={styles.wrapper}>
           {!isSubmitted ? (
-            <ContactForm submitContact={submitContact} />
+            <ContactForm submitContact={submitContact} theme={props.theme} />
           ) : (
-            <Success />
+            <Success theme={props.theme} />
           )}
-          <div className={classes.formContentRight}>
+          <div className={styles.formContentRight}>
             <img
               src={registerImg}
               alt="register"
-              className={classes.imgContainer}
+              className={styles.imgContainer}
             />
           </div>
         </div>

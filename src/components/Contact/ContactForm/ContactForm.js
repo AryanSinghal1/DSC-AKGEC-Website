@@ -3,6 +3,7 @@ import axios from "axios";
 
 //import css
 import classes from "./ContactForm.module.css";
+import classesDark from "./ContactFormDark.module.css";
 
 //import function
 import validate from "./ValidateInfo";
@@ -24,6 +25,13 @@ const ContactForm = (props) => {
     studentNumber: "",
     universityRollNumber: "",
   });
+
+  let styles = classes;
+  if (props.theme) {
+    styles = classes;
+  } else {
+    styles = classesDark;
+  }
 
   // const [processing, setProcessing] = useState(false);
   const [errors, setErrors] = useState({});
@@ -48,6 +56,7 @@ const ContactForm = (props) => {
 
     if (Object.keys(errors).length === 0) {
       let data = values;
+      console.log(values);
       axios
         .post("/api/register", data, {
           headers: {
@@ -61,7 +70,7 @@ const ContactForm = (props) => {
         .catch((err) => {
           console.log(err);
           setFormError(
-            <div className={classes.error}>
+            <div className={styles.error}>
               <MdIcons.MdError />
               <p>Error Ocurred</p>
             </div>
@@ -77,15 +86,15 @@ const ContactForm = (props) => {
   };
 
   return (
-    <div className={classes.formContentLeft}>
-      <form className={classes.form} onSubmit={submitHandler}>
-        <div className={classes.logo}>
-          <Logo />
+    <div className={styles.formContentLeft}>
+      <form className={styles.form} onSubmit={submitHandler}>
+        <div className={styles.logo}>
+          <Logo theme={props.theme} />
         </div>
         <h1>Register</h1>
-        <div className={classes.formFields}>
-          <div className={classes.formInputs}>
-            <label htmlFor="fullName" className={classes.formLabel}>
+        <div className={styles.formFields}>
+          <div className={styles.formInputs}>
+            <label htmlFor="fullName" className={styles.formLabel}>
               Full Name
             </label>
             <div>
@@ -94,15 +103,15 @@ const ContactForm = (props) => {
                 type="text"
                 name="fullName"
                 placeholder="Full Name"
-                className={classes.formInput}
+                className={styles.formInput}
                 value={values.fullName}
                 onChange={valueChangeHandler}
               />
               {errors.fullName && <p>{errors.fullName}</p>}
             </div>
           </div>
-          <div className={classes.formInputs}>
-            <label htmlFor="email" className={classes.formLabel}>
+          <div className={styles.formInputs}>
+            <label htmlFor="email" className={styles.formLabel}>
               Email
             </label>
             <div>
@@ -111,15 +120,15 @@ const ContactForm = (props) => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className={classes.formInput}
+                className={styles.formInput}
                 value={values.email}
                 onChange={valueChangeHandler}
               />
               {errors.email && <p>{errors.email}</p>}
             </div>
           </div>
-          <div className={classes.formInputs}>
-            <label htmlFor="year" className={classes.formLabel}>
+          <div className={styles.formInputs}>
+            <label htmlFor="year" className={styles.formLabel}>
               Year
             </label>
             <select
@@ -134,8 +143,8 @@ const ContactForm = (props) => {
               <option value="4">4</option>
             </select>
           </div>
-          <div className={classes.formInputs}>
-            <label htmlFor="branch" className={classes.formLabel}>
+          <div className={styles.formInputs}>
+            <label htmlFor="branch" className={styles.formLabel}>
               Branch
             </label>
             <select
@@ -152,8 +161,8 @@ const ContactForm = (props) => {
               <option value="ME">ME</option>
             </select>
           </div>
-          <div className={classes.formInputs}>
-            <label htmlFor="section" className={classes.formLabel}>
+          <div className={styles.formInputs}>
+            <label htmlFor="section" className={styles.formLabel}>
               Section
             </label>
             <div>
@@ -162,15 +171,15 @@ const ContactForm = (props) => {
                 type="text"
                 name="section"
                 placeholder="Enter your Section"
-                className={classes.formInput}
+                className={styles.formInput}
                 value={values.section}
                 onChange={valueChangeHandler}
               />
               {errors.section && <p>{errors.section}</p>}
             </div>
           </div>
-          <div className={classes.formInputs}>
-            <label htmlFor="student_number" className={classes.formLabel}>
+          <div className={styles.formInputs}>
+            <label htmlFor="student_number" className={styles.formLabel}>
               Student Number
             </label>
             <div>
@@ -179,17 +188,17 @@ const ContactForm = (props) => {
                 type="text"
                 name="studentNumber"
                 placeholder="Student Number"
-                className={classes.formInput}
+                className={styles.formInput}
                 value={values.studentNumber}
                 onChange={valueChangeHandler}
               />
               {errors.studentNumber && <p>{errors.studentNumber}</p>}
             </div>
           </div>
-          <div className={classes.formInputs}>
+          <div className={styles.formInputs}>
             <label
               htmlFor="university_roll_number"
-              className={classes.formLabel}
+              className={styles.formLabel}
             >
               University Roll Number
             </label>
@@ -199,7 +208,7 @@ const ContactForm = (props) => {
                 type="text"
                 name="universityRollNumber"
                 placeholder="University Roll Number"
-                className={classes.formInput}
+                className={styles.formInput}
                 value={values.universityRollNumber}
                 onChange={valueChangeHandler}
               />
@@ -210,7 +219,7 @@ const ContactForm = (props) => {
           </div>
         </div>
         {formError}
-        <button className={classes.formInputBtn} type="submit">
+        <button className={styles.formInputBtn} type="submit">
           Register
         </button>
       </form>

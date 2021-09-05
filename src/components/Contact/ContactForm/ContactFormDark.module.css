@@ -1,5 +1,5 @@
 .formInputs p {
-  color: red;
+  color: var(--google-med-red);
 }
 
 .formContentLeft {
@@ -24,7 +24,7 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  color: #202124;
+  color: var(--dark-mode-text-color-2);
   text-align: left;
   transition: 0.2s;
 }
@@ -35,7 +35,7 @@
 }
 
 .logo {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-mode-bg-4);
   width: 200%;
   padding-bottom: 8px;
   margin-left: -50%;
@@ -61,19 +61,19 @@
 }
 
 .formInputs label {
-  color: var(--text-color);
+  color: var(--dark-mode-text-color-3);
   line-height: 41px;
   transition: 0.2s;
 }
 
 .formInput:focus {
-  border: 1px solid var(--google-blue);
-  box-shadow: 0 2px 8px 1px var(--google-med-lite-blue);
+  background: linear-gradient(145deg, #1e1e1e, #232323);
+  box-shadow: 3px 3px 4px #1d1d1d, -3px -3px 4px #252525;
 }
 
 .formInputs select:focus {
-  border: 1px solid var(--google-blue);
-  box-shadow: 0 2px 8px 1px var(--google-med-lite-blue);
+  background: linear-gradient(145deg, #1e1e1e, #232323);
+  box-shadow: 3px 3px 4px #1d1d1d, -3px -3px 4px #252525;
 }
 
 .formInputs input,
@@ -87,8 +87,23 @@
   outline: none;
   font-size: 16px;
   border-radius: 4px;
-  border: 1px solid var(--border-color);
+  /* border: none; */
+  border: 1px solid var(--dark-mode-bg-4);
   transition: 0.2s;
+  background: var(--dark-mode-bg-3);
+  color: var(--dark-mode-text-color-soft-2);
+}
+
+.formInputs select option {
+  background: var(--dark-mode-bg-5);
+  color: var(--dark-mode-text-color-soft-1);
+  padding: 4px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--dark-mode-text-color-soft-2);
+  opacity: 1; /* Firefox */
 }
 
 .formInputBtn {
@@ -107,16 +122,16 @@
 }
 
 .formInputBtn:hover {
-  color: white;
-  background-color: #185abc;
-  box-shadow: -4px 4px 16px var(--button-shadow-color);
+  color: var(--google-blue);
+  background-color: var(--dark-mode-text-color-1);
+  /* box-shadow: -4px 4px 16px var(--button-shadow-color); */
   border-radius: 3px;
   cursor: pointer;
 }
 
 .formInputBtn:active {
   transform: translate(0px);
-  box-shadow: -2px 2px 4px #b3b3b3;
+  box-shadow: -2px 2px 4px var(--google-med-blue);
   border-radius: 3px;
 }
 
@@ -126,8 +141,10 @@
 
 .error {
   width: 70%;
-  background-color: var(--google-med-lite-red);
-  color: var(--google-dark-red);
+  /* background-color: var(--google-med-lite-red); */
+  /* color: var(--google-dark-red); */
+  background-color: var(--dark-mode-text-color-1);
+  color: var(--google-red);
   border-radius: 6px;
   align-items: center;
   margin: 1rem auto 0 auto;
