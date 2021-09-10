@@ -54,18 +54,29 @@ const Footer = (props) => {
             <h5 className={styles.socialsHeader}>Social</h5>
             <ul className={styles.socialLinks}>
               <li>
-                <a href="https://www.instagram.com/dsc_akgec/">
+                <a href="https://www.instagram.com/dsc_akgec/" target="_blank">
                   <FiIcons.FiInstagram />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/dsc_akgec/">
-                  <FiIcons.FiFacebook />
+                <a
+                  href="https://www.youtube.com/channel/UCZvNkM_UNgR4_2fQpBqvWUw"
+                  target="_blank"
+                >
+                  <FiIcons.FiYoutube />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/dsc_akgec/">
+                <a
+                  href="https://www.linkedin.com/in/dsc-akgec/"
+                  target="_blank"
+                >
                   <FiIcons.FiLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank">
+                  <FiIcons.FiTwitter />
                 </a>
               </li>
             </ul>
