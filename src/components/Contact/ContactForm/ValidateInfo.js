@@ -17,23 +17,31 @@ export default function validateInfo(values) {
     errors.section = "Invalid! Number only";
   }
 
-  if (!values.studentNumber) {
-    errors.studentNumber = "Enter Student Number";
-  } else if (values.studentNumber.length !== 7) {
-    errors.studentNumber = "Student Number should be of 7 digits";
-  } else if (!/^\d+$/.test(values.studentNumber)) {
-    errors.studentNumber = "Invalid! Numbers only";
+  if (!values.studentNo) {
+    errors.studentNo = "Enter Student Number";
+  } else if (values.studentNo.length !== 7) {
+    errors.studentNo = "Student Number should be of 7 digits";
+  } else if (!/^\d+$/.test(values.studentNo)) {
+    errors.studentNo = "Invalid! Numbers only";
   }
 
-  if (!values.universityRollNumber) {
-    errors.universityRollNumber = "Enter University Roll Number";
+  if (!values.universityRollNo) {
+    errors.universityRollNo = "Enter University Roll Number";
   } else if (
-    values.universityRollNumber.length !== 13 &&
-    values.universityRollNumber.length !== 10
+    values.universityRollNo.length !== 13 &&
+    values.universityRollNo.length !== 10
   ) {
-    errors.universityRollNumber = "Invalid University Roll Number";
-  } else if (!/^\d+$/.test(values.universityRollNumber)) {
-    errors.universityRollNumber = "Invalid! Numbers only";
+    errors.universityRollNo = "Invalid University Roll Number";
+  } else if (!/^\d+$/.test(values.universityRollNo)) {
+    errors.universityRollNo = "Invalid! Numbers only";
+  }
+
+  if (!values.question) {
+    errors.question = "answer is required";
+  }
+
+  if (!values.question2) {
+    errors.question2 = "answer is required";
   }
 
   return errors;

@@ -36,6 +36,7 @@ const ShowcaseContact = (props) => {
           ) : (
             <Success theme={props.theme} />
           )}
+          {/* <Success theme={props.theme} /> */}
           <div className={styles.formContentRight}>
             <img
               src={registerImg}

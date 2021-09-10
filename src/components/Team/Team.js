@@ -43,6 +43,30 @@ class Team extends React.Component {
             property="og:description"
             content="Every member of the society has always been passionate and hard working towards their goal, creating a positive work environment. Their support and will to help each other out in every way possible is what makes DSC-AkGEC a ‘team’."
           />
+          {/* Twitter Card data */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@dsc_akgec" />
+          <meta name="twitter:account_id" content="1180336578507370496" />
+          <meta name="twitter:title" content="DSC AKGEC Team" />
+          <meta
+            name="twitter:description"
+            content="Every member of the society has always been passionate and hard working towards their goal, creating a positive work environment. Their support and will to help each other out in every way possible is what makes DSC-AkGEC a ‘team’."
+          />
+          <meta
+            name="twitter:image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
+
+          {/* Schema.org markup for Google+ */}
+          <meta itemprop="name" content="DSC AKGEC Team" />
+          <meta
+            itemprop="description"
+            content="Every member of the society has always been passionate and hard working towards their goal, creating a positive work environment. Their support and will to help each other out in every way possible is what makes DSC-AkGEC a ‘team’."
+          />
+          <meta
+            itemprop="image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
         </Helmet>
 
         <ShowcaseTeam theme={this.props.theme} />

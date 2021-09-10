@@ -17,9 +17,11 @@ const Success = (props) => {
   return (
     <div className={styles.formContentLeft}>
       <div className={styles.formSuccess}>
-        <h1 className={styles.formHeader}>
-          Thanks for Registering! Check your inbox for more details.
-        </h1>
+        <h1 className={styles.formHeader}>Thanks for Registering!</h1>
+        <p className={styles.formDesc}>
+          You will be provided with a <span>Login id</span> and{" "}
+          <span>Password</span> for the test.
+        </p>
       </div>
       <img src={successImg} alt="success" className={styles.formImg2} />
     </div>

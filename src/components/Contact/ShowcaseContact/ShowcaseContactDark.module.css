@@ -54,7 +54,7 @@
     max-width: 750px;
   }
   .wrapper {
-    grid-template-columns: 3fr 6fr;
+    grid-template-columns: 5fr 6fr;
   }
 }
 

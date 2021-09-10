@@ -7,23 +7,24 @@ import classesDark from "./ContactFormDark.module.css";
 
 //import function
 import validate from "./ValidateInfo";
-import { appendSpreadsheet } from "./Spreadsheet";
 
 //import component
 import Logo from "../../Logo/Logo";
 
 //import icons
 import * as MdIcons from "react-icons/md";
+import Spinner from "../../../assets/images/Spinner.svg";
 
 const ContactForm = (props) => {
   const [values, setValues] = useState({
     fullName: "",
     email: "",
-    year: "1",
     branch: "1",
     section: "",
-    studentNumber: "",
-    universityRollNumber: "",
+    studentNo: "",
+    universityRollNo: "",
+    question: "",
+    question2: "",
   });
 
   let styles = classes;
@@ -37,6 +38,7 @@ const ContactForm = (props) => {
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [formError, setFormError] = useState(<div></div>);
+  const [postReq, setPostReq] = useState(false);
 
   const valueChangeHandler = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -54,21 +56,27 @@ const ContactForm = (props) => {
     e.preventDefault();
     setErrors(validate(values));
 
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(validate(values)).length === 0) {
+      // console.log("axios method called");
       let data = values;
-      console.log(values);
+      // console.log(values);
+      setPostReq(true);
       axios
-        .post("/api/register", data, {
+        .post("https://admin-dsc.herokuapp.com/candidates", data, {
           headers: {
             "Content-type": "application/json;charset=UTF-8",
           },
         })
         .then((res) => {
+          // console.log("successfully registered");
+          setPostReq(false);
+          // console.log(res);
           setIsSubmit(true);
-          appendSpreadsheet(data);
         })
         .catch((err) => {
-          console.log(err);
+          setPostReq(false);
+          // console.log(err);
+          // console.log(err.response);
           setFormError(
             <div className={styles.error}>
               <MdIcons.MdError />
@@ -128,22 +136,6 @@ const ContactForm = (props) => {
             </div>
           </div>
           <div className={styles.formInputs}>
-            <label htmlFor="year" className={styles.formLabel}>
-              Year
-            </label>
-            <select
-              id="year"
-              name="year"
-              value={values.year}
-              onChange={valueChangeHandler}
-            >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div className={styles.formInputs}>
             <label htmlFor="branch" className={styles.formLabel}>
               Branch
             </label>
@@ -186,13 +178,13 @@ const ContactForm = (props) => {
               <input
                 id="student_number"
                 type="text"
-                name="studentNumber"
+                name="studentNo"
                 placeholder="Student Number"
                 className={styles.formInput}
-                value={values.studentNumber}
+                value={values.studentNo}
                 onChange={valueChangeHandler}
               />
-              {errors.studentNumber && <p>{errors.studentNumber}</p>}
+              {errors.studentNo && <p>{errors.studentNo}</p>}
             </div>
           </div>
           <div className={styles.formInputs}>
@@ -206,22 +198,60 @@ const ContactForm = (props) => {
               <input
                 id="university_roll_number"
                 type="text"
-                name="universityRollNumber"
+                name="universityRollNo"
                 placeholder="University Roll Number"
                 className={styles.formInput}
-                value={values.universityRollNumber}
+                value={values.universityRollNo}
                 onChange={valueChangeHandler}
               />
-              {errors.universityRollNumber && (
-                <p>{errors.universityRollNumber}</p>
-              )}
+              {errors.universityRollNo && <p>{errors.universityRollNo}</p>}
+            </div>
+          </div>
+          <div className={styles.formInputs}>
+            <label htmlFor="question" className={styles.formLabel}>
+              Question 1
+            </label>
+            <div>
+              <input
+                id="question"
+                type="text"
+                name="question"
+                placeholder="answer"
+                className={styles.formInput}
+                value={values.question}
+                onChange={valueChangeHandler}
+              />
+              {errors.question && <p>{errors.question}</p>}
+            </div>
+          </div>
+          <div className={styles.formInputs}>
+            <label htmlFor="question2" className={styles.formLabel}>
+              Question 2
+            </label>
+            <div>
+              <input
+                id="question2"
+                type="text"
+                name="question2"
+                placeholder="answer"
+                className={styles.formInput}
+                value={values.question2}
+                onChange={valueChangeHandler}
+              />
+              {errors.question2 && <p>{errors.question2}</p>}
             </div>
           </div>
         </div>
         {formError}
-        <button className={styles.formInputBtn} type="submit">
-          Register
-        </button>
+        {postReq ? (
+          <button className={styles.formInputSpinnerBtn} type="submit">
+            <img src={Spinner} alt="spinner" height="19px" />
+          </button>
+        ) : (
+          <button className={styles.formInputBtn} type="submit">
+            Register
+          </button>
+        )}
       </form>
     </div>
   );

@@ -42,6 +42,29 @@ class Events extends React.Component {
             property="og:description"
             content="The main motive behind each and every event DSC-AKGEC has conducted has always been spreading knowledge and giving inspiration to developers."
           />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@dsc_akgec" />
+          <meta name="twitter:account_id" content="1180336578507370496" />
+          <meta name="twitter:title" content="DSC AKGEC Events" />
+          <meta
+            name="twitter:description"
+            content="The main motive behind each and every event DSC-AKGEC has conducted has always been spreading knowledge and giving inspiration to developers."
+          />
+          <meta
+            name="twitter:image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
+
+          {/* Schema.org markup for Google+ */}
+          <meta itemprop="name" content="DSC AKGEC Events" />
+          <meta
+            itemprop="description"
+            content="The main motive behind each and every event DSC-AKGEC has conducted has always been spreading knowledge and giving inspiration to developers."
+          />
+          <meta
+            itemprop="image"
+            content="https://images.app.goo.gl/UQrT9aN5vNwQWDMHA"
+          />
         </Helmet>
 
         <ShowcaseEvents theme={this.props.theme} />

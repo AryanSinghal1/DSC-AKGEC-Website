@@ -106,6 +106,21 @@
   opacity: 1; /* Firefox */
 }
 
+.formInputSpinnerBtn {
+  margin: 32px 0;
+  text-decoration: none;
+  padding: 9px 48px;
+  color: #fff;
+  display: inline-block;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+  transform: translateY(-1px);
+  background: var(--google-blue);
+  border: none;
+  border-radius: 3px;
+}
+
 .formInputBtn {
   margin: 32px 0;
   text-decoration: none;
