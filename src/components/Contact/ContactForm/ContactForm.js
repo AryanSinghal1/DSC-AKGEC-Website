@@ -13,7 +13,7 @@ import Logo from "../../Logo/Logo";
 
 //import icons
 import * as MdIcons from "react-icons/md";
-import Spinner from "../../../assets/images/Spinner.svg";
+import Spinner from '../../../assets/images/Spinner.svg';
 
 const ContactForm = (props) => {
   const [values, setValues] = useState({
@@ -44,6 +44,9 @@ const ContactForm = (props) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+
+
+
   useEffect(() => {
     const { submitContact } = props;
 
@@ -52,46 +55,121 @@ const ContactForm = (props) => {
     }
   }, [errors, props, isSubmit]);
 
+
+
+
+
   const submitHandler = (e) => {
     e.preventDefault();
     setErrors(validate(values));
 
     if (Object.keys(validate(values)).length === 0) {
-      // console.log("axios method called");
-      let data = values;
-      // console.log(values);
-      setPostReq(true);
-      axios
-        .post("https://admin-dsc.herokuapp.com/candidates", data, {
-          headers: {
-            "Content-type": "application/json;charset=UTF-8",
-          },
-        })
-        .then((res) => {
-          // console.log("successfully registered");
-          setPostReq(false);
-          // console.log(res);
-          setIsSubmit(true);
-        })
-        .catch((err) => {
-          setPostReq(false);
-          // console.log(err);
-          // console.log(err.response);
-          setFormError(
-            <div className={styles.error}>
-              <MdIcons.MdError />
-              <p>Error Ocurred</p>
-            </div>
-          );
-        });
+    setPostReq(true);
+    axios.get(`https://admin-dsc.herokuapp.com/candidates?email=${values.email}`)
+    .then(function (response) {// handle success
+    if(response.data.length === 0 ){
+      validateStudentNo();
+    } else {
+      setPostReq(false);
+      setFormError(
+        <div className={styles.error}>
+          <MdIcons.MdError />
+          <p>Email Already Registered</p>
+        </div>
+      );
     }
-    // setFormError(
-    //   <div className={classes.error}>
-    //     <MdIcons.MdError />
-    //     <p>Error Ocurred</p>
-    //   </div>
-    // );
+    })
+    .catch(function (error) { // handle error
+      setPostReq(false);
+    setFormError(
+      <div className={styles.error}>
+        <MdIcons.MdError />
+        <p>Error Ocurred</p>
+      </div>
+    );
+    })   
+    }
   };
+
+  const validateStudentNo = () => {
+    axios.get(`https://admin-dsc.herokuapp.com/candidates?studentNo=${values.studentNo}`)
+    .then(function (response) {// handle success
+    if(response.data.length === 0 ){
+      validateUniversityRollNo();
+    } else {
+      setPostReq(false);
+      setFormError(
+        <div className={styles.error}>
+          <MdIcons.MdError />
+          <p>Student No. Already Registered</p>
+        </div>
+      );
+    }
+    })
+    .catch(function (error) {// handle error
+      setPostReq(false);
+    setFormError(
+      <div className={styles.error}>
+        <MdIcons.MdError />
+        <p>Error Ocurred</p>
+      </div>
+    );
+    })
+  }
+
+  const validateUniversityRollNo = () => {
+    axios.get(`https://admin-dsc.herokuapp.com/candidates?universityRollNo=${values.universityRollNo}`)
+    .then(function (response) {// handle success
+    if(response.data.length === 0 ){
+        submitData();
+    } else {
+      setPostReq(false);
+      setFormError(
+        <div className={styles.error}>
+          <MdIcons.MdError />
+          <p>UnivRollNo. Already Registered</p>
+        </div>
+      );
+    }
+    })
+    .catch(function (error) {// handle error
+      setPostReq(false);
+    setFormError(
+      <div className={styles.error}>
+        <MdIcons.MdError />
+        <p>Error Ocurred</p>
+      </div>
+    );
+    })
+  }
+
+  const submitData = () => {
+    let data = values;
+    setPostReq(true);
+    axios
+      .post("https://admin-dsc.herokuapp.com/candidates", data, {
+        headers: {
+          "Content-type": "application/json;charset=UTF-8",
+        },
+      })
+      .then((res) => {
+        console.log("successfully registered");
+        setPostReq(false);
+        console.log(res);
+        setIsSubmit(true);
+      })
+      .catch((err) => {
+        setPostReq(false);
+        console.log(err);
+        console.log(err.response);
+        setFormError(
+          <div className={styles.error}>
+            <MdIcons.MdError />
+            <p>Error Ocurred</p>
+          </div>
+        );
+      });
+  }
 
   return (
     <div className={styles.formContentLeft}>
@@ -204,7 +282,9 @@ const ContactForm = (props) => {
                 value={values.universityRollNo}
                 onChange={valueChangeHandler}
               />
-              {errors.universityRollNo && <p>{errors.universityRollNo}</p>}
+              {errors.universityRollNo && (
+                <p>{errors.universityRollNo}</p>
+              )}
             </div>
           </div>
           <div className={styles.formInputs}>
@@ -243,15 +323,16 @@ const ContactForm = (props) => {
           </div>
         </div>
         {formError}
-        {postReq ? (
-          <button className={styles.formInputSpinnerBtn} type="submit">
-            <img src={Spinner} alt="spinner" height="19px" />
-          </button>
-        ) : (
-          <button className={styles.formInputBtn} type="submit">
-            Register
-          </button>
-        )}
+        {
+          postReq ?
+            <button className={styles.formInputSpinnerBtn} type="submit">
+              <img src={Spinner} alt="spinner" height="19px" />
+            </button>
+            :
+            <button className={styles.formInputBtn} type="submit">
+              Register
+            </button>
+        }
       </form>
     </div>
   );
