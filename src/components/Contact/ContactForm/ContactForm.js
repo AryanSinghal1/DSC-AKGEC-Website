@@ -13,7 +13,7 @@ import Logo from "../../Logo/Logo";
 
 //import icons
 import * as MdIcons from "react-icons/md";
-import Spinner from '../../../assets/images/Spinner.svg';
+import Spinner from "../../../assets/images/Spinner.svg";
 
 const ContactForm = (props) => {
   const [values, setValues] = useState({
@@ -44,9 +44,6 @@ const ContactForm = (props) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-
-
-
   useEffect(() => {
     const { submitContact } = props;
 
@@ -55,93 +52,102 @@ const ContactForm = (props) => {
     }
   }, [errors, props, isSubmit]);
 
-
-
-
-
   const submitHandler = (e) => {
     e.preventDefault();
     setErrors(validate(values));
 
     if (Object.keys(validate(values)).length === 0) {
-    setPostReq(true);
-    axios.get(`https://admin-dsc.herokuapp.com/candidates?email=${values.email}`)
-    .then(function (response) {// handle success
-    if(response.data.length === 0 ){
-      validateStudentNo();
-    } else {
-      setPostReq(false);
-      setFormError(
-        <div className={styles.error}>
-          <MdIcons.MdError />
-          <p>Email Already Registered</p>
-        </div>
-      );
-    }
-    })
-    .catch(function (error) { // handle error
-      setPostReq(false);
-    setFormError(
-      <div className={styles.error}>
-        <MdIcons.MdError />
-        <p>Error Ocurred</p>
-      </div>
-    );
-    })   
+      setPostReq(true);
+      axios
+        .get(`https://admin-dsc.herokuapp.com/candidates?email=${values.email}`)
+        .then(function (response) {
+          // handle success
+          if (response.data.length === 0) {
+            validateStudentNo();
+          } else {
+            setPostReq(false);
+            setFormError(
+              <div className={styles.error}>
+                <MdIcons.MdError />
+                <p>Email Already Registered</p>
+              </div>
+            );
+          }
+        })
+        .catch(function (error) {
+          // handle error
+          setPostReq(false);
+          setFormError(
+            <div className={styles.error}>
+              <MdIcons.MdError />
+              <p>Error Ocurred</p>
+            </div>
+          );
+        });
     }
   };
 
   const validateStudentNo = () => {
-    axios.get(`https://admin-dsc.herokuapp.com/candidates?studentNo=${values.studentNo}`)
-    .then(function (response) {// handle success
-    if(response.data.length === 0 ){
-      validateUniversityRollNo();
-    } else {
-      setPostReq(false);
-      setFormError(
-        <div className={styles.error}>
-          <MdIcons.MdError />
-          <p>Student No. Already Registered</p>
-        </div>
-      );
-    }
-    })
-    .catch(function (error) {// handle error
-      setPostReq(false);
-    setFormError(
-      <div className={styles.error}>
-        <MdIcons.MdError />
-        <p>Error Ocurred</p>
-      </div>
-    );
-    })
-  }
+    axios
+      .get(
+        `https://admin-dsc.herokuapp.com/candidates?studentNo=${values.studentNo}`
+      )
+      .then(function (response) {
+        // handle success
+        if (response.data.length === 0) {
+          validateUniversityRollNo();
+        } else {
+          setPostReq(false);
+          setFormError(
+            <div className={styles.error}>
+              <MdIcons.MdError />
+              <p>Student No. Already Registered</p>
+            </div>
+          );
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        setPostReq(false);
+        setFormError(
+          <div className={styles.error}>
+            <MdIcons.MdError />
+            <p>Error Ocurred</p>
+          </div>
+        );
+      });
+  };
 
   const validateUniversityRollNo = () => {
-    axios.get(`https://admin-dsc.herokuapp.com/candidates?universityRollNo=${values.universityRollNo}`)
-    .then(function (response) {// handle success
-    if(response.data.length === 0 ){
-        submitData();
-    } else {
-      setPostReq(false);
-      setFormError(
-        <div className={styles.error}>
-          <MdIcons.MdError />
-          <p>UnivRollNo. Already Registered</p>
-        </div>
-      );
-    }
-    })
-    .catch(function (error) {// handle error
-      setPostReq(false);
-    setFormError(
-      <div className={styles.error}>
-        <MdIcons.MdError />
-        <p>Error Ocurred</p>
-      </div>
-    );
-    })
-  }
+    axios
+      .get(
+        `https://admin-dsc.herokuapp.com/candidates?universityRollNo=${values.universityRollNo}`
+      )
+      .then(function (response) {
+        // handle success
+        if (response.data.length === 0) {
+          submitData();
+        } else {
+          setPostReq(false);
+          setFormError(
+            <div className={styles.error}>
+              <MdIcons.MdError />
+              <p>UnivRollNo. Already Registered</p>
+            </div>
+          );
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        setPostReq(false);
+        setFormError(
+          <div className={styles.error}>
+            <MdIcons.MdError />
+            <p>Error Ocurred</p>
+          </div>
+        );
+      });
+  };
 
   const submitData = () => {
     let data = values;
@@ -169,7 +175,7 @@ const ContactForm = (props) => {
           </div>
         );
       });
-  }
+  };
 
   return (
     <div className={styles.formContentLeft}>
@@ -225,9 +231,14 @@ const ContactForm = (props) => {
             >
               <option value="CSE">CSE</option>
               <option value="CS">CS</option>
-              <option value="CS/IT">CS/IT</option>
+              <option value="CS">CSE (AI & ML)</option>
+              <option value="CS">CSE (DS)</option>
               <option value="IT">IT</option>
+              <option value="CS/IT">CS/IT</option>
+              <option value="ECE">EEE</option>
               <option value="ECE">ECE</option>
+              <option value="ECE">EIE</option>
+              <option value="ECE">CE</option>
               <option value="ME">ME</option>
             </select>
           </div>
@@ -282,21 +293,19 @@ const ContactForm = (props) => {
                 value={values.universityRollNo}
                 onChange={valueChangeHandler}
               />
-              {errors.universityRollNo && (
-                <p>{errors.universityRollNo}</p>
-              )}
+              {errors.universityRollNo && <p>{errors.universityRollNo}</p>}
             </div>
           </div>
           <div className={styles.formInputs}>
             <label htmlFor="question" className={styles.formLabel}>
-              Question 1
+              Github Profile Link
             </label>
             <div>
               <input
                 id="question"
                 type="text"
                 name="question"
-                placeholder="answer"
+                placeholder="Enter Link Here (if any)"
                 className={styles.formInput}
                 value={values.question}
                 onChange={valueChangeHandler}
@@ -306,14 +315,14 @@ const ContactForm = (props) => {
           </div>
           <div className={styles.formInputs}>
             <label htmlFor="question2" className={styles.formLabel}>
-              Question 2
+              LinkedIn Profile Link
             </label>
             <div>
               <input
                 id="question2"
                 type="text"
                 name="question2"
-                placeholder="answer"
+                placeholder="Enter Link Here (if any)"
                 className={styles.formInput}
                 value={values.question2}
                 onChange={valueChangeHandler}
@@ -323,16 +332,15 @@ const ContactForm = (props) => {
           </div>
         </div>
         {formError}
-        {
-          postReq ?
-            <button className={styles.formInputSpinnerBtn} type="submit">
-              <img src={Spinner} alt="spinner" height="19px" />
-            </button>
-            :
-            <button className={styles.formInputBtn} type="submit">
-              Register
-            </button>
-        }
+        {postReq ? (
+          <button className={styles.formInputSpinnerBtn} type="submit">
+            <img src={Spinner} alt="spinner" height="19px" />
+          </button>
+        ) : (
+          <button className={styles.formInputBtn} type="submit">
+            Register
+          </button>
+        )}
       </form>
     </div>
   );

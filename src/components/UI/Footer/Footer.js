@@ -75,7 +75,7 @@ const Footer = (props) => {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/" target="_blank">
+                <a href="https://twitter.com/dsc_akgec" target="_blank">
                   <FiIcons.FiTwitter />
                 </a>
               </li>
