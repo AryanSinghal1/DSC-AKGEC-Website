@@ -46,7 +46,7 @@ const Footer = (props) => {
                 <Link to="/team">Team</Link>
               </li>
               <li>
-                <Link to="/contact">Register</Link>
+                <Link to="/register">Register</Link>
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ const Footer = (props) => {
         <hr className={styles.footerGap} />
         <div className={styles.footerBottom}>
           <div className={styles.footerBottomContainer}>
-            <div className={styles.copyright}>&copy; DSC-AKGEC</div>
+            <div className={styles.copyright}>&copy; GDSC-AKGEC</div>
           </div>
         </div>
       </div>

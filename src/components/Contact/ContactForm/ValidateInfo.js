@@ -36,13 +36,5 @@ export default function validateInfo(values) {
     errors.universityRollNo = "Invalid! Numbers only";
   }
 
-  if (!values.question) {
-    errors.question = "answer is required";
-  }
-
-  if (!values.question2) {
-    errors.question2 = "answer is required";
-  }
-
   return errors;
 }

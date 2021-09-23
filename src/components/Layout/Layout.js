@@ -107,7 +107,7 @@ class Layout extends Component {
                       component={() => <Team theme={this.state.theme} />}
                     />
                     <Route
-                      path="/contact"
+                      path="/register"
                       component={() => <Contact theme={this.state.theme} />}
                     />
                   </Switch>

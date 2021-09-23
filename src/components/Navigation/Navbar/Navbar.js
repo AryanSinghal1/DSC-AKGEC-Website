@@ -70,7 +70,7 @@ const Navbar = (props) => {
                 </NavLink>
               </li>
               <li className={styles.NavigationItem}>
-                <NavLink to="/contact" activeClassName={styles.selected}>
+                <NavLink to="/register" activeClassName={styles.selected}>
                   Register
                 </NavLink>
               </li>

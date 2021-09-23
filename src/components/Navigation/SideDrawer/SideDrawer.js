@@ -115,7 +115,7 @@ const SideDrawer = (props) => {
 
           <li className={styles.navText}>
             <NavLink
-              to="/contact"
+              to="/register"
               className={styles.menuBars}
               activeClassName={styles.selected}
             >
