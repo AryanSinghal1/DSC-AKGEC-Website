@@ -1,4 +1,4 @@
-import person1 from "../../assets/images/person.jpg";
+// import person1 from "../../assets/images/person.jpg";
 
 import Himaniii from "../../assets/images/team/Himaniii.jpeg";
 import Anshika from "../../assets/images/team/Anshika.jpg";

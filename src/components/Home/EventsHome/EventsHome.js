@@ -9,7 +9,7 @@ import classesDark from "./EventsHomeDark.module.css";
 import { EventsData } from "../../Events/EventsData";
 
 //image import
-import image1 from "../../../assets/images/events.jpg";
+// import image1 from "../../../assets/images/events.jpg";
 
 //import component
 import Card from "../../UI/Card/Card";

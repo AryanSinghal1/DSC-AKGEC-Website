@@ -53,12 +53,20 @@ const TeamMember = (props) => {
             <h2 className={styles.cardDesignation}>{props.cardDesignation}</h2>
             <ul className={styles.linkList}>
               <li>
-                <a href={props.links.github} target={"_blank"}>
+                <a
+                  href={props.links.github}
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
                   <FiIcons.FiGithub className={svgClassDomain} />
                 </a>
               </li>
               <li>
-                <a href={props.links.linkedin} target={"_blank"}>
+                <a
+                  href={props.links.linkedin}
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
                   <FiIcons.FiLinkedin className={svgClassDomain} />
                 </a>
               </li>

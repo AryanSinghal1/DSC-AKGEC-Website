@@ -23,6 +23,7 @@ const Event = (props) => {
               href={props.cardHref}
               className={styles.cardTitleLink}
               target={"_blank"}
+              rel="noopener noreferrer"
             >
               <h3 className={styles.cardTitle}>{props.cardTitle}</h3>
             </a>

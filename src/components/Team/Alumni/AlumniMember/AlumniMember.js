@@ -27,7 +27,11 @@ const AlumniMember = (props) => {
             <h2 className={styles.cardDesignation}>{props.cardDesignation}</h2>
             <ul className={styles.linkList}>
               <li>
-                <a href={props.links.linkedin} target={"_blank"}>
+                <a
+                  href={props.links.linkedin}
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
                   <FiIcons.FiLinkedin />
                 </a>
               </li>

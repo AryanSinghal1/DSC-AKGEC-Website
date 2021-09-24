@@ -31,6 +31,16 @@
   transition: 0.2s;
 }
 
+.headingTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headingTemp h1 {
+  text-align: center;
+}
+
 .formContentRight {
   padding: 0;
   display: flex;
@@ -63,6 +73,9 @@
   .wrapper {
     grid-template-columns: 1fr;
   }
+  .headingTemp {
+    height: 100px;
+  }
   .registerHeader {
     font-size: 40px;
   }
@@ -85,11 +98,17 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .headingTemp h1 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 400px) {
   .Container {
     max-width: 250px;
+  }
+  .headingTemp h1 {
+    font-size: 16px;
   }
   .registerHeader {
     font-size: 24px;

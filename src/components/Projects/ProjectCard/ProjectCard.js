@@ -96,7 +96,11 @@ const ProjectCard = (props) => {
             {props.cardText}
             <ul className={styles.links}>
               <li>
-                <a href={props.links.github} target={"_blank"}>
+                <a
+                  href={props.links.github}
+                  target={"_blank"}
+                  rel="noopener noreferrer"
+                >
                   <FaIcons.FaGithub />
                   <span>&nbsp;Github</span>
                 </a>

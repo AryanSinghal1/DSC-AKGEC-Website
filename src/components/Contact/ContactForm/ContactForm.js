@@ -231,14 +231,14 @@ const ContactForm = (props) => {
             >
               <option value="CSE">CSE</option>
               <option value="CS">CS</option>
-              <option value="CS">CSE (AI & ML)</option>
-              <option value="CS">CSE (DS)</option>
+              <option value="CS (AI & ML)">CSE (AI & ML)</option>
+              <option value="CSE (DS)">CSE (DS)</option>
               <option value="IT">IT</option>
               <option value="CS/IT">CS/IT</option>
-              <option value="ECE">EEE</option>
+              <option value="EEE">EEE</option>
               <option value="ECE">ECE</option>
-              <option value="ECE">EIE</option>
-              <option value="ECE">CE</option>
+              <option value="EIE">EIE</option>
+              <option value="CE">CE</option>
               <option value="ME">ME</option>
             </select>
           </div>

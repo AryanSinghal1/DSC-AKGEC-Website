@@ -54,7 +54,11 @@ const Footer = (props) => {
             <h5 className={styles.socialsHeader}>Social</h5>
             <ul className={styles.socialLinks}>
               <li>
-                <a href="https://www.instagram.com/dsc_akgec/" target="_blank">
+                <a
+                  href="https://www.instagram.com/dsc_akgec/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FiIcons.FiInstagram />
                 </a>
               </li>
@@ -62,6 +66,7 @@ const Footer = (props) => {
                 <a
                   href="https://www.youtube.com/channel/UCZvNkM_UNgR4_2fQpBqvWUw"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FiIcons.FiYoutube />
                 </a>
@@ -70,12 +75,17 @@ const Footer = (props) => {
                 <a
                   href="https://www.linkedin.com/in/dsc-akgec/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FiIcons.FiLinkedin />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/dsc_akgec" target="_blank">
+                <a
+                  href="https://twitter.com/dsc_akgec"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FiIcons.FiTwitter />
                 </a>
               </li>
