@@ -20,7 +20,7 @@ const Card = (props) => {
         className={styles.cardImage}
       />
       <div className={styles.cardBody}>
-        <a href={props.cardHref} target={"_blank"} rel="noopener noreferrer" s>
+        <a href={props.cardHref} target={"_blank"} rel="noopener noreferrer">
           <h3 className={styles.cardHeader}>{props.cardTitle}</h3>
         </a>
         <p>{props.cardText}</p>
