@@ -179,7 +179,7 @@ const ContactForm = (props) => {
 
   return (
     <div className={styles.formContentLeft}>
-      <form className={styles.form} onSubmit={submitHandler}>
+      {/* <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.logo}>
           <Logo theme={props.theme} />
         </div>
@@ -341,7 +341,7 @@ const ContactForm = (props) => {
             Register
           </button>
         )}
-      </form>
+      </form> */}
     </div>
   );
 };

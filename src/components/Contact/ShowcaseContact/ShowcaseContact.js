@@ -29,20 +29,9 @@ const ShowcaseContact = (props) => {
   return (
     <div className={styles.ShowcaseContact}>
       <div className={styles.Container}>
-        <h1 className={styles.registerHeader}>Registration Open</h1>
+        <h1 className={styles.registerHeader}>Registration Closed</h1>
         <div className={styles.wrapper}>
-          {!isSubmitted ? (
-            <ContactForm submitContact={submitContact} theme={props.theme} />
-          ) : (
-            <Success theme={props.theme} />
-          )}
-          {/* <Success theme={props.theme} /> */}
           <div className={styles.formContentRight}>
-            <img
-              src={registerImg}
-              alt="register"
-              className={styles.imgContainer}
-            />
           </div>
         </div>
       </div>
