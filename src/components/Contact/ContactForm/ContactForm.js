@@ -159,9 +159,9 @@ const ContactForm = (props) => {
         },
       })
       .then((res) => {
-        console.log("successfully registered");
+        // console.log("successfully registered");
         setPostReq(false);
-        console.log(res);
+        // console.log(res);
         setIsSubmit(true);
       })
       .catch((err) => {
