@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
 //import css
 import classes from "./ShowcaseContact.module.css";
 import classesDark from "./ShowcaseContactDark.module.css";
 
 //image import
-import registerImg from "../../../assets/images/register.png";
+// import registerImg from "../../../assets/images/register.png";
 
 //import Components
-import ContactForm from "../ContactForm/ContactForm";
-import Success from "../Success/Success";
+// import ContactForm from "../ContactForm/ContactForm";
+// import Success from "../Success/Success";
 
 const ShowcaseContact = (props) => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  function submitContact() {
-    // console.log("Success");
-    setIsSubmitted(true);
-  }
+  // function submitContact() {
+  //   // console.log("Success");
+  //   setIsSubmitted(true);
+  // }
 
   let styles = classes;
   if (props.theme) {

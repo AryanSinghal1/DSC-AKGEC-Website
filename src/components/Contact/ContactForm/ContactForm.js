@@ -9,11 +9,11 @@ import classesDark from "./ContactFormDark.module.css";
 import validate from "./ValidateInfo";
 
 //import component
-import Logo from "../../Logo/Logo";
+// import Logo from "../../Logo/Logo";
 
 //import icons
 import * as MdIcons from "react-icons/md";
-import Spinner from "../../../assets/images/Spinner.svg";
+// import Spinner from "../../../assets/images/Spinner.svg";
 
 const ContactForm = (props) => {
   const [values, setValues] = useState({
