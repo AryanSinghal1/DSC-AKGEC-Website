@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 //import css
@@ -110,6 +110,10 @@ class Layout extends Component {
                       path="/register"
                       component={() => <Contact theme={this.state.theme} />}
                     />
+                    <Redirect from="/contact" to="/register" />
+                    <Route path="/register">
+                    <Contact theme={this.state.theme} />
+                    </Route>
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
