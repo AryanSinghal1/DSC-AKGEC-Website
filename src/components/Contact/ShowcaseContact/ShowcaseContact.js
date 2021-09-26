@@ -29,10 +29,20 @@ const ShowcaseContact = (props) => {
   return (
     <div className={styles.ShowcaseContact}>
       <div className={styles.Container}>
-        <h1 className={styles.registerHeader}>Registration Closed</h1>
+        <h1 className={styles.registerHeader}>Registration Open</h1>
         <div className={styles.wrapper}>
-          <div className={styles.formContentRight}>
-          </div>
+          <iframe
+            title="gform"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSemWsn2-fx1EZutkYm0hwVSSRXjwo607b8jgqDczpgsNs0qQQ/viewform?embedded=true"
+            width="100%"
+            height="1702"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+          {/* <div className={styles.formContentRight}></div> */}
         </div>
       </div>
     </div>
