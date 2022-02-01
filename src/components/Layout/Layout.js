@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 //import css
@@ -13,9 +13,12 @@ import Home from "../Home/Home";
 import Events from "../Events/Events";
 import Contact from "../Contact/Contact";
 import Team from "../Team/Team";
+import Alumni from '../Team/Alumni/Alumni'
 import Projects from "../Projects/Projects";
 import Blog from "../Blog/Blog";
 import ScrollToTop from "../../ScrollToTop";
+import EmailVerify from "../EmailVerify/EmailVerify";
+import Otp from "../OTP/otp";
 // import Footer from "../UI/Footer/Footer";
 
 class Layout extends Component {
@@ -107,13 +110,21 @@ class Layout extends Component {
                       component={() => <Team theme={this.state.theme} />}
                     />
                     <Route
+                      path="/alumni"
+                      component={() => <Alumni theme={this.state.theme} />}
+                    />
+                    <Route
                       path="/register"
+                      component={() => <EmailVerify theme={this.state.theme} />}
+                    />
+                    <Route
+                      path="/otp"
+                      component={() => <Otp theme={this.state.theme} />}
+                    />
+                    <Route
+                      path="/details"
                       component={() => <Contact theme={this.state.theme} />}
                     />
-                    <Redirect from="/contact" to="/register" />
-                    <Route path="/register">
-                    <Contact theme={this.state.theme} />
-                    </Route>
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

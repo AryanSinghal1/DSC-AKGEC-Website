@@ -42,12 +42,20 @@
   text-decoration: none;
 }
 
+.cardTitleLink:hover {
+  text-decoration: none;
+}
+
 .cardTitle {
   font-size: 22px;
   font-weight: 500;
   margin: 10px 0;
   color: var(--google-blue);
   transition: 0.2s;
+}
+
+.cardTitleLink:hover .cardTitle {
+  color: var(--google-dark-yellow);
 }
 
 .cardSubtitle {

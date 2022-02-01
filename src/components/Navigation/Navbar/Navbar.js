@@ -69,11 +69,11 @@ const Navbar = (props) => {
                   Team
                 </NavLink>
               </li>
-              <li className={styles.NavigationItem}>
+              {/* <li className={styles.NavigationItem}>
                 <NavLink to="/register" activeClassName={styles.selected}>
                   Register
                 </NavLink>
-              </li>
+              </li> */}
               <li className={darkModeClasses.join(" ")}>
                 <ThemeButton
                   switchTheme={props.switchTheme}

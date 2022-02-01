@@ -9,11 +9,11 @@ import classesDark from "./ContactFormDark.module.css";
 import validate from "./ValidateInfo";
 
 //import component
-// import Logo from "../../Logo/Logo";
+import Logo from "../../Logo/Logo";
 
 //import icons
 import * as MdIcons from "react-icons/md";
-// import Spinner from "../../../assets/images/Spinner.svg";
+import Spinner from "../../../assets/images/Spinner.svg";
 
 const ContactForm = (props) => {
   const [values, setValues] = useState({
@@ -159,9 +159,9 @@ const ContactForm = (props) => {
         },
       })
       .then((res) => {
-        // console.log("successfully registered");
+        console.log("successfully registered");
         setPostReq(false);
-        // console.log(res);
+        console.log(res);
         setIsSubmit(true);
       })
       .catch((err) => {
@@ -179,7 +179,7 @@ const ContactForm = (props) => {
 
   return (
     <div className={styles.formContentLeft}>
-      {/* <form className={styles.form} onSubmit={submitHandler}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.logo}>
           <Logo theme={props.theme} />
         </div>
@@ -231,7 +231,7 @@ const ContactForm = (props) => {
             >
               <option value="CSE">CSE</option>
               <option value="CS">CS</option>
-              <option value="CS (AI & ML)">CSE (AI & ML)</option>
+              <option value="CSE (AI & ML)">CSE (AI & ML)</option>
               <option value="CSE (DS)">CSE (DS)</option>
               <option value="IT">IT</option>
               <option value="CS/IT">CS/IT</option>
@@ -341,7 +341,7 @@ const ContactForm = (props) => {
             Register
           </button>
         )}
-      </form> */}
+      </form>
     </div>
   );
 };

@@ -20,6 +20,7 @@
 .Button:hover {
   color: #4285f4;
   background-color: var(--dark-mode-text-color-1);
+  text-decoration: none;
   /* box-shadow: -4px 4px 16px var(--button-shadow-color); */
 }
 

@@ -24,12 +24,7 @@ const Card = (props) => {
           <h3 className={styles.cardHeader}>{props.cardTitle}</h3>
         </a>
         <p>{props.cardText}</p>
-        <a
-          href={props.cardHref}
-          className={styles.btn}
-          target={"_blank"}
-          rel="noopener noreferrer"
-        >
+        <a href={props.cardHref} className={styles.btn} target={"_blank"} rel="noopener noreferrer">
           Read
         </a>
       </div>

@@ -113,7 +113,7 @@ const SideDrawer = (props) => {
             </NavLink>
           </li>
 
-          <li className={styles.navText}>
+          {/* <li className={styles.navText}>
             <NavLink
               to="/register"
               className={styles.menuBars}
@@ -122,7 +122,7 @@ const SideDrawer = (props) => {
               <MdIcons.MdMessage />
               <span>Register</span>
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

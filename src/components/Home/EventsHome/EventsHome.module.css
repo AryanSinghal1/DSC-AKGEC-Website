@@ -48,6 +48,8 @@
   background: var(--google-dark-blue);
   box-shadow: -4px 4px 8px var(--button-shadow-color);
   border-radius: 2px;
+  color: white;
+  text-decoration: none;
 }
 
 .eventBtn:active {

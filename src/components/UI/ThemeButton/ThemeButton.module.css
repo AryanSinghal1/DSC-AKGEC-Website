@@ -16,7 +16,8 @@
   cursor: pointer;
   transform: translateY(-2px);
 }
-.ThemeButton:focus-visible {
+.ThemeButton:focus,
+.ThemeButton:active {
   outline: none;
 }
 

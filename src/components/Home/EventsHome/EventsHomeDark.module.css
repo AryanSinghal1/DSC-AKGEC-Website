@@ -33,7 +33,6 @@
 
 .eventBtn {
   display: inline-block;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   padding: 12px 30px;
@@ -49,6 +48,7 @@
 .eventBtn:hover {
   border-radius: 2px;
   color: var(--dark-mode-text-color-1);
+  text-decoration: none;
 }
 
 .eventBtn:active {

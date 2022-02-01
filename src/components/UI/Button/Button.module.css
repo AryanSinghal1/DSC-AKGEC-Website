@@ -9,7 +9,7 @@
   font-size: 14px;
   font-weight: 500;
   transform: translateY(-1px);
-  background: #4285f4;
+  background: var(--google-blue);
 }
 
 .Button i,
@@ -19,8 +19,9 @@
 
 .Button:hover {
   color: white;
-  background-color: #185abc;
+  background-color: var(--google-dark-blue);
   box-shadow: -4px 4px 16px var(--button-shadow-color);
+  text-decoration: none;
 }
 
 .Button:active {
