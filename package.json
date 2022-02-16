@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.25.0",
+    "firebase": "^9.6.6",
     "google-spreadsheet": "^3.0.13",
     "http-proxy-middleware": "^1.0.5",
     "react": "^16.13.1",
